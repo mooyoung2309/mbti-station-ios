@@ -9,8 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello !")
-            .padding()
+        VStack {
+            List {
+                Section(header: HStack {
+                    Text("인기 게시글")
+                        .bold()
+                        .foregroundColor(.black)
+                        .font(.title2)
+                    Spacer()
+                    
+                    Text("더보기")
+                        .bold()
+                        .foregroundColor(.blue)
+                })
+                        {
+                    Text("안녕하세요")
+                    Text("안녕안녕")
+                    Text("안녕안녕안녕")
+                }
+            }
+        }
     }
 }
 
