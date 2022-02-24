@@ -15,14 +15,40 @@ struct PostList: View {
     }
     
     var body: some View {
-        let _hotPosts = hotPosts.prefix(5)
+        let _hotPosts = hotPosts.prefix(3)
         
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading,spacing: 5) {
                     HStack {
                         Text("인기 게시글")
-                            .font(.title)
+                            .font(.title2)
+                            .bold()
+                        Spacer()
+                        NavigationLink {
+                            PostDetail(posts: hotPosts)
+                                .navigationTitle("인기 게시글")
+                                .navigationBarTitleDisplayMode(.inline)
+                        } label: {
+                            Text("모두 보기")
+                                .font(.title3)
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    ForEach(0..<_hotPosts.count) {
+                        i in VStack {
+                            PostRow(post: _hotPosts[i])
+                            if(i != _hotPosts.count - 1) {
+                                Divider()
+                            }
+                        }
+                    }
+                }.padding(.bottom, 20)
+                
+                VStack(alignment: .leading,spacing: 5) {
+                    HStack {
+                        Text("INFP가 좋아한 게시글")
+                            .font(.title2)
                             .bold()
                         Spacer()
                         NavigationLink {
@@ -44,9 +70,39 @@ struct PostList: View {
                         }
                     }
                 }
+
             }.padding(.horizontal, 20)
-            .navigationTitle("홈")
+                .navigationTitle("홈")
         }
+        
+        //        NavigationView {
+        //            List {
+        //                Section(header: HStack {
+        //                    Text("🔥인기 게시글")
+        //                        .foregroundColor(.black)
+        //                        .font(.title)
+        //                        .bold()
+        //                    Spacer()
+        //                    NavigationLink {
+        //                        PostDetail(posts: hotPosts)
+        //                            .navigationTitle("인기 게시글")
+        //                            .navigationBarTitleDisplayMode(.inline)
+        //                    } label: {
+        //                        Text("모두 보기")
+        //                            .foregroundColor(.blue)
+        //                            .font(.title3)
+        //                    }
+        //                }.listRowInsets(EdgeInsets(.zero))
+        //                ) {
+        //                    ForEach(0..<_hotPosts.count) {
+        //                        i in VStack {
+        //                            PostRow(post: _hotPosts[i])
+        //                        }
+        //                    }
+        //                }
+        //
+        //            }
+        //        }
     }
 }
 

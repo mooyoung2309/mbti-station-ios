@@ -13,19 +13,36 @@ struct PostRow: View {
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
             VStack(alignment: .leading, spacing: 1) {
-                Text(post.title).font(.title2).lineLimit(1)
-                Text(post.context).font(.body).lineLimit(1)
+                Text(post.title)
+                    .lineLimit(1)
+                    .font(.title3)
+                Text(post.context)
+                    .foregroundColor(Color.init(UIColor.darkGray))
+                    .lineLimit(1)
+                    .font(.body)
                 HStack(alignment: .center, spacing: 5) {
-                    Text(post.mbti + " " + post.name).font(.caption)
-                    Text("5분전").font(.caption)
+                    Text(post.mbti + " " + post.name)
+                        .foregroundColor(Color.init(UIColor.darkGray))
+                        .font(.caption)
+                    Text("5분전")
+                        .foregroundColor(Color.init(UIColor.darkGray))
+                        .font(.caption)
                     Spacer()
                     HStack(alignment: .center,spacing: 2) {
-                        Image(systemName: "heart").imageScale(.small)
-                        Text(String(post.likeCount)).font(.caption)
+                        Image(systemName: "heart")
+                            .foregroundColor(Color.init(UIColor.darkGray))
+                            .imageScale(.small)
+                        Text(String(post.likeCount))
+                            .foregroundColor(Color.init(UIColor.darkGray))
+                            .font(.caption)
                     }
                     HStack(alignment: .center, spacing: 2) {
-                        Image(systemName: "bubble.left").imageScale(.small)
-                        Text(String(post.commentCount)).font(.caption)
+                        Image(systemName: "bubble.left")
+                            .foregroundColor(Color.init(UIColor.darkGray))
+                            .imageScale(.small)
+                        Text(String(post.commentCount))
+                            .foregroundColor(Color.init(UIColor.darkGray))
+                            .font(.caption)
                     }
                 }
             }
