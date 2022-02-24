@@ -18,14 +18,19 @@ struct PostList: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading,spacing: 5) {
+                    
                     HStack {
                         Text("인기 게시글")
                             .font(.title)
                             .bold()
                         Spacer()
-                        Text("모두 보기")
-                            .font(.title3)
-                            .foregroundColor(.blue)
+                        NavigationLink {
+                            PostDetail()
+                        } label: {
+                            Text("모두 보기")
+                                .font(.title3)
+                                .foregroundColor(.blue)
+                        }
                     }
                     ForEach(0..<5) {
                         i in VStack {

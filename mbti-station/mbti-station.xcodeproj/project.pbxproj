@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		700A9D2B27C75D0C00FA9473 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A9D2A27C75D0C00FA9473 /* PostDetail.swift */; };
 		70AFB7EF27C6391A00E04F64 /* mbti_stationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFB7EE27C6391A00E04F64 /* mbti_stationApp.swift */; };
 		70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFB7F027C6391A00E04F64 /* ContentView.swift */; };
 		70AFB7F327C6391B00E04F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AFB7F227C6391B00E04F64 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		700A9D2A27C75D0C00FA9473 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 		70AFB7EB27C6391A00E04F64 /* mbti-station.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mbti-station.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AFB7EE27C6391A00E04F64 /* mbti_stationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbti_stationApp.swift; sourceTree = "<group>"; };
 		70AFB7F027C6391A00E04F64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				70D022D927C7344C0048FC86 /* PostRow.swift */,
 				70D022E527C753420048FC86 /* PostList.swift */,
+				700A9D2A27C75D0C00FA9473 /* PostDetail.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700A9D2B27C75D0C00FA9473 /* PostDetail.swift in Sources */,
 				70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */,
 				70D022E627C753420048FC86 /* PostList.swift in Sources */,
 				70D022DA27C7344C0048FC86 /* PostRow.swift in Sources */,
