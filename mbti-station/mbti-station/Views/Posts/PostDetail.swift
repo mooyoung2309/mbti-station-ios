@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct PostDetail: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    var posts: [Post]
+    
+    var body: some View {       
+        ScrollView {
+            ForEach(0..<posts.count) {
+                i in VStack {
+                    PostRow(post: posts[i])
+                    if(i != posts.count - 1) {
+                        Divider()
+                    }
+                }
+            }
+        }.padding(.horizontal, 20)
     }
 }
 
 struct PostDetail_Previews: PreviewProvider {
+    static var posts = ModelData().posts
+    
     static var previews: some View {
-        PostDetail()
+        PostDetail(posts: posts)
     }
 }

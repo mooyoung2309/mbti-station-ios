@@ -10,32 +10,35 @@ import SwiftUI
 struct PostList: View {
     @EnvironmentObject var modelData: ModelData
     
-    var posts: [Post] {
+    var hotPosts: [Post] {
         modelData.posts
     }
     
     var body: some View {
+        let _hotPosts = hotPosts.prefix(5)
+        
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading,spacing: 5) {
-                    
                     HStack {
                         Text("인기 게시글")
                             .font(.title)
                             .bold()
                         Spacer()
                         NavigationLink {
-                            PostDetail()
+                            PostDetail(posts: hotPosts)
+                                .navigationTitle("인기 게시글")
+                                .navigationBarTitleDisplayMode(.inline)
                         } label: {
                             Text("모두 보기")
                                 .font(.title3)
                                 .foregroundColor(.blue)
                         }
                     }
-                    ForEach(0..<5) {
+                    ForEach(0..<_hotPosts.count) {
                         i in VStack {
-                            PostRow(post: posts[i])
-                            if(i != posts.count - 1) {
+                            PostRow(post: _hotPosts[i])
+                            if(i != _hotPosts.count - 1) {
                                 Divider()
                             }
                         }

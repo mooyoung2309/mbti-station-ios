@@ -12,7 +12,7 @@ struct PostRow: View {
     
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
-            VStack(alignment: .leading, spacing: 0.5) {
+            VStack(alignment: .leading, spacing: 1) {
                 Text(post.title).font(.title2).lineLimit(1)
                 Text(post.context).font(.body).lineLimit(1)
                 HStack(alignment: .center, spacing: 5) {
