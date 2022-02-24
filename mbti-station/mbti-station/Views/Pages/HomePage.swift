@@ -13,19 +13,24 @@ struct HomePage: View {
     var hotPosts: [Post] {
         modelData.posts
     }
+    var editorPosts: [Post] {
+        modelData.editorPosts
+    }
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
+                PostCardScrollView(navigationTitle: "모여봐요 ✏️",posts: editorPosts)
+                    .padding(.bottom, 20)
                 PostList(navigationTitle: "인기 🔥", posts: hotPosts)
                     .padding(.bottom, 20)
                 PostList(navigationTitle: "INFP 🙂", posts: hotPosts)
-
             }
+            
             .navigationTitle("홈")
             .padding(.horizontal, 20)
         }
-                        
+        
     }
 }
 

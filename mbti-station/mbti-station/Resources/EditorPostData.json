@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "mbti": "INFP",
+        "name": "안녕나는포도",
+        "title": "소중한 기억",
+        "context": "나만의 소중한 기억 적고가기.",
+        "likeCount": 13,
+        "commentCount": 15,
+        "uploadDate": "2022-02-24T14:17:00"
+    },
+    {
+        "id": 1,
+        "mbti": "INFP",
+        "name": "안녕나는포도",
+        "title": "행복했던 순간",
+        "context": "행복했던 순간을 적고가기",
+        "likeCount": 13,
+        "commentCount": 15,
+        "uploadDate": "2022-02-24T14:17:00"
+    },
+    {
+        "id": 2,
+        "mbti": "INFP",
+        "name": "안녕나는포도",
+        "title": "힘들때 듣는 음악",
+        "context": "나만 알고있는 힘들때 듣는 음악 적고가기",
+        "likeCount": 25,
+        "commentCount": 45,
+        "uploadDate": "2022-02-23T14:17:00"
+    },
+]
