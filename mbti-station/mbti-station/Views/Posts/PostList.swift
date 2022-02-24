@@ -8,72 +8,95 @@
 import SwiftUI
 
 struct PostList: View {
-    @EnvironmentObject var modelData: ModelData
-    
-    var hotPosts: [Post] {
-        modelData.posts
-    }
+    var navigationTitle: String
+    var posts: [Post]
     
     var body: some View {
-        let _hotPosts = hotPosts.prefix(3)
+        let _posts = posts.prefix(3)
         
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading,spacing: 5) {
-                    HStack {
-                        Text("인기 게시글")
-                            .font(.title2)
-                            .bold()
-                        Spacer()
-                        NavigationLink {
-                            PostDetail(posts: hotPosts)
-                                .navigationTitle("인기 게시글")
-                                .navigationBarTitleDisplayMode(.inline)
-                        } label: {
-                            Text("모두 보기")
-                                .font(.title3)
-                                .foregroundColor(.blue)
-                        }
-                    }
-                    ForEach(0..<_hotPosts.count) {
-                        i in VStack {
-                            PostRow(post: _hotPosts[i])
-                            if(i != _hotPosts.count - 1) {
-                                Divider()
-                            }
-                        }
-                    }
-                }.padding(.bottom, 20)
-                
-                VStack(alignment: .leading,spacing: 5) {
-                    HStack {
-                        Text("INFP가 좋아한 게시글")
-                            .font(.title2)
-                            .bold()
-                        Spacer()
-                        NavigationLink {
-                            PostDetail(posts: hotPosts)
-                                .navigationTitle("인기 게시글")
-                                .navigationBarTitleDisplayMode(.inline)
-                        } label: {
-                            Text("모두 보기")
-                                .font(.title3)
-                                .foregroundColor(.blue)
-                        }
-                    }
-                    ForEach(0..<_hotPosts.count) {
-                        i in VStack {
-                            PostRow(post: _hotPosts[i])
-                            if(i != _hotPosts.count - 1) {
-                                Divider()
-                            }
-                        }
+        VStack(alignment: .leading,spacing: 5) {
+            HStack {
+                Text(navigationTitle)
+                    .font(.title2)
+                    .bold()
+                Spacer()
+                NavigationLink {
+                    PostDetail(posts: posts)
+                        .navigationTitle(navigationTitle)
+                        .navigationBarTitleDisplayMode(.inline)
+                } label: {
+                    Text("모두 보기")
+                        .font(.title3)
+                        .foregroundColor(.blue)
+                }
+            }
+            ForEach(0..<_posts.count) {
+                i in VStack {
+                    PostRow(post: _posts[i])
+                    if(i != _posts.count - 1) {
+                        Divider()
                     }
                 }
-
-            }.padding(.horizontal, 20)
-                .navigationTitle("홈")
+            }
         }
+        
+        //        NavigationView {
+        //            ScrollView {
+        //                VStack(alignment: .leading,spacing: 5) {
+        //                    HStack {
+        //                        Text("인기 게시글")
+        //                            .font(.title2)
+        //                            .bold()
+        //                        Spacer()
+        //                        NavigationLink {
+        //                            PostDetail(posts: hotPosts)
+        //                                .navigationTitle("인기 게시글")
+        //                                .navigationBarTitleDisplayMode(.inline)
+        //                        } label: {
+        //                            Text("모두 보기")
+        //                                .font(.title3)
+        //                                .foregroundColor(.blue)
+        //                        }
+        //                    }
+        //                    ForEach(0..<_hotPosts.count) {
+        //                        i in VStack {
+        //                            PostRow(post: _hotPosts[i])
+        //                            if(i != _hotPosts.count - 1) {
+        //                                Divider()
+        //                            }
+        //                        }
+        //                    }
+        //                }.padding(.bottom, 20)
+        //
+        //                VStack(alignment: .leading,spacing: 5) {
+        //                    HStack {
+        //                        Text("INFP가 좋아한 게시글")
+        //                            .font(.title2)
+        //                            .bold()
+        //                        Spacer()
+        //                        NavigationLink {
+        //                            PostDetail(posts: hotPosts)
+        //                                .navigationTitle("인기 게시글")
+        //                                .navigationBarTitleDisplayMode(.inline)
+        //                        } label: {
+        //                            Text("모두 보기")
+        //                                .font(.title3)
+        //                                .foregroundColor(.blue)
+        //                        }
+        //                    }
+        //                    ForEach(0..<_hotPosts.count) {
+        //                        i in VStack {
+        //                            PostRow(post: _hotPosts[i])
+        //                            if(i != _hotPosts.count - 1) {
+        //                                Divider()
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //
+        //            }.padding(.horizontal, 20)
+        //                .navigationTitle("홈")
+        //        }
         
         //        NavigationView {
         //            List {
@@ -107,7 +130,9 @@ struct PostList: View {
 }
 
 struct PostList_Previews: PreviewProvider {
+    static var posts = Array(ModelData().posts.prefix(5))
+    
     static var previews: some View {
-        PostList().environmentObject(ModelData())
+        PostList(navigationTitle: "인기 게시글", posts: posts)
     }
 }
