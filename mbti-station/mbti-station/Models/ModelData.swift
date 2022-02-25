@@ -11,6 +11,11 @@ import Combine
 final class ModelData: ObservableObject {
     @Published var posts: [Post] = load("PostData.json")
     @Published var editorPosts: [Post] = load("EditorPostData.json")
+    @Published var postOptions: [PostOption] = [
+        PostOption(id: 0, name: "전체", imageName: "a.circle.fill"),
+        PostOption(id: 1, name: "질문", imageName: "q.circle.fill"),
+        PostOption(id: 2, name: "투표", imageName: "archivebox.circle.fill"),
+    ]
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

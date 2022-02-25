@@ -26,11 +26,10 @@ struct HomePage: View {
                     .padding(.bottom, 20)
                 PostList(navigationTitle: "INFP 🙂", posts: hotPosts)
             }
-            
-            .navigationTitle("홈")
             .padding(.horizontal, 20)
+            .navigationTitle("홈")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        
     }
 }
 

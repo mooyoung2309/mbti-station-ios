@@ -12,6 +12,11 @@
 		700A9D3027C7781C00FA9473 /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A9D2F27C7781C00FA9473 /* PostCard.swift */; };
 		700A9D3227C77C3100FA9473 /* EditorPostData.json in Resources */ = {isa = PBXBuildFile; fileRef = 700A9D3127C77C3100FA9473 /* EditorPostData.json */; };
 		700A9D3427C77DC700FA9473 /* PostCardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700A9D3327C77DC700FA9473 /* PostCardScrollView.swift */; };
+		705FACB927C8939400AC2AC1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACB827C8939400AC2AC1 /* UserInfo.swift */; };
+		705FACBB27C893AC00AC2AC1 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACBA27C893AC00AC2AC1 /* ProfilePage.swift */; };
+		705FACBD27C8977800AC2AC1 /* PostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACBC27C8977800AC2AC1 /* PostPage.swift */; };
+		705FACBF27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACBE27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift */; };
+		705FACC127C89B9900AC2AC1 /* PostOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACC027C89B9900AC2AC1 /* PostOption.swift */; };
 		70AFB7EF27C6391A00E04F64 /* mbti_stationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFB7EE27C6391A00E04F64 /* mbti_stationApp.swift */; };
 		70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFB7F027C6391A00E04F64 /* ContentView.swift */; };
 		70AFB7F327C6391B00E04F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AFB7F227C6391B00E04F64 /* Assets.xcassets */; };
@@ -49,6 +54,11 @@
 		700A9D2F27C7781C00FA9473 /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
 		700A9D3127C77C3100FA9473 /* EditorPostData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EditorPostData.json; sourceTree = "<group>"; };
 		700A9D3327C77DC700FA9473 /* PostCardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardScrollView.swift; sourceTree = "<group>"; };
+		705FACB827C8939400AC2AC1 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		705FACBA27C893AC00AC2AC1 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		705FACBC27C8977800AC2AC1 /* PostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPage.swift; sourceTree = "<group>"; };
+		705FACBE27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOptionButtonScrollView.swift; sourceTree = "<group>"; };
+		705FACC027C89B9900AC2AC1 /* PostOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOption.swift; sourceTree = "<group>"; };
 		70AFB7EB27C6391A00E04F64 /* mbti-station.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mbti-station.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AFB7EE27C6391A00E04F64 /* mbti_stationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbti_stationApp.swift; sourceTree = "<group>"; };
 		70AFB7F027C6391A00E04F64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				700A9D2D27C7726300FA9473 /* HomePage.swift */,
+				705FACBA27C893AC00AC2AC1 /* ProfilePage.swift */,
+				705FACBC27C8977800AC2AC1 /* PostPage.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		705FACB727C8935D00AC2AC1 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				705FACB827C8939400AC2AC1 /* UserInfo.swift */,
+			);
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 		70AFB7E227C6391A00E04F64 = {
@@ -163,6 +183,7 @@
 			children = (
 				700A9D2C27C7723900FA9473 /* Pages */,
 				70D022D827C734100048FC86 /* Posts */,
+				705FACB727C8935D00AC2AC1 /* Profiles */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +196,7 @@
 				700A9D2A27C75D0C00FA9473 /* PostDetail.swift */,
 				700A9D2F27C7781C00FA9473 /* PostCard.swift */,
 				700A9D3327C77DC700FA9473 /* PostCardScrollView.swift */,
+				705FACBE27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -184,6 +206,7 @@
 			children = (
 				70D022DE27C7413A0048FC86 /* Post.swift */,
 				70D022E027C7422D0048FC86 /* ModelData.swift */,
+				705FACC027C89B9900AC2AC1 /* PostOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,9 +354,14 @@
 			files = (
 				700A9D2B27C75D0C00FA9473 /* PostDetail.swift in Sources */,
 				70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */,
+				705FACBD27C8977800AC2AC1 /* PostPage.swift in Sources */,
 				70D022E627C753420048FC86 /* PostList.swift in Sources */,
+				705FACB927C8939400AC2AC1 /* UserInfo.swift in Sources */,
 				70D022DA27C7344C0048FC86 /* PostRow.swift in Sources */,
 				700A9D3027C7781C00FA9473 /* PostCard.swift in Sources */,
+				705FACBB27C893AC00AC2AC1 /* ProfilePage.swift in Sources */,
+				705FACBF27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift in Sources */,
+				705FACC127C89B9900AC2AC1 /* PostOption.swift in Sources */,
 				70D022E127C7422D0048FC86 /* ModelData.swift in Sources */,
 				70AFB7EF27C6391A00E04F64 /* mbti_stationApp.swift in Sources */,
 				70D022DF27C7413A0048FC86 /* Post.swift in Sources */,
