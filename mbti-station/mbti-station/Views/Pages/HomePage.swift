@@ -19,10 +19,9 @@ struct HomePage: View {
             ScrollView(showsIndicators: false) {
 //                PostCardScrollView(navigationTitle: "모여봐요 ✏️",posts: editorPosts)
 //                    .padding(.bottom, 20)
-//                PostList(navigationTitle: "인기 🔥", posts: hotPosts)
-//                    .padding(.bottom, 20)
                 QuestionPostPreviewList(navigationTitle: "질문 게시판", questionPosts: questionPosts)
-//                PostList(navigationTitle: "INFP 🙂", posts: hotPosts)
+                    .padding(.bottom, 20)
+                QuestionPostPreviewList(navigationTitle: "질문 게시판", questionPosts: questionPosts)
             }
             .padding(.horizontal, 20)
             .navigationTitle("홈")
