@@ -1,0 +1,86 @@
+[
+    {
+        "id": 0,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "질문",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "title": "소중한 기억",
+        "context": "나만의 소중한 기억 적고가기.",
+    },
+    {
+        "id": 1,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "질문",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "title": "소중한 기억",
+        "context": "나만의 소중한 기억 적고가기.",
+    },
+    {
+        "id": 2,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "질문",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "title": "소중한 기억",
+        "context": "나만의 소중한 기억 적고가기.",
+    },
+    {
+        "id": 3,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "질문",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "title": "소중한 기억",
+        "context": "나만의 소중한 기억 적고가기.",
+    },
+]

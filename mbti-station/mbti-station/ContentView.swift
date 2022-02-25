@@ -11,21 +11,21 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            HomePage()
-            .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("홈")
-                  }
+//            HomePage()
+//            .tabItem {
+//                    Image(systemName: "house.fill")
+//                    Text("홈")
+//                  }
             PostPage()
             .tabItem {
                     Image(systemName: "doc.plaintext.fill")
                     Text("게시판")
                   }
-            HomePage()
-            .tabItem {
-                    Image(systemName: "moon.stars.fill")
-                    Text("관심")
-                  }
+//            HomePage()
+//            .tabItem {
+//                    Image(systemName: "moon.stars.fill")
+//                    Text("관심")
+//                  }
             ProfilePage()
             .tabItem {
                     Image(systemName: "person.crop.circle.fill")

@@ -6,13 +6,29 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Post: Hashable, Codable, Identifiable {
-    var id: Int
-    var mbti: String
+struct Post: Hashable, Codable {
+    var user: PostUser
+    var type: PostType
+    var info: PostInfo
+}
+
+struct PostUser: Hashable, Codable {
     var name: String
-    var title: String
-    var context: String
+    var mbti: String
+}
+
+struct PostType: Hashable, Codable {
+    var name: String
+    
+    var imageName: String
+    var image: Image {
+        Image(systemName: imageName)
+    }
+}
+
+struct PostInfo: Hashable, Codable {
     var likeCount: Int
     var commentCount: Int
     var uploadDate: String
