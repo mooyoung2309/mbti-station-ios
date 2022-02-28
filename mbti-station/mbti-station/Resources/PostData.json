@@ -1,133 +1,71 @@
 [
     {
-        "id": 0,
-        "mbti": "INFP",
-        "name": "안녕나는포도",
-        "title": "소중한 기억",
-        "context": "여러분의 소중한 기억을 적어주세요.",
-        "likeCount": 13,
-        "commentCount": 15,
-        "uploadDate": "2022-02-24T14:17:00"
+        "user": {
+            "name": "익명",
+            "mbti": "INFP"
+        },
+        "type": {
+            "name": "질문",
+            "imageName": "q.circle.fill",
+        },
+        "info": {
+            "title": "테스트 질문1 제목",
+            "context": "테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다.",
+            "likeCount": 13,
+            "commentCount": 15,
+            "uploadDate": "dasd",
+        }
     },
     {
-        "id": 1,
-        "mbti": "INFP",
-        "name": "안녕나는포도",
-        "title": "J인 사람들 이거 어떻게 생각해?",
-        "context": "안녕하세요. 첫 질문 올려봅니다. J이신 분들은 이거 어떻게 생각하시는지 궁금해서 이렇게 질문 올려봅니다. 제가 저번주 주말에 카페에 갔었는데, 카페 음료를 주문을 했고 알바생분이 학생 할인을 해주신다고 하셔서 저는 ...",
-        "likeCount": 13,
-        "commentCount": 15,
-        "uploadDate": "2022-02-24T14:17:00"
+        "user": {
+            "name": "익명",
+            "mbti": "INFP"
+        },
+        "type": {
+            "name": "질문",
+            "imageName": "q.circle.fill",
+        },
+        "info": {
+            "title": "테스트 질문1 제목",
+            "context": "테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다.",
+            "likeCount": 13,
+            "commentCount": 15,
+            "uploadDate": "dasd",
+        }
     },
     {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
+        "user": {
+            "name": "익명",
+            "mbti": "INFP"
+        },
+        "type": {
+            "name": "질문",
+            "imageName": "q.circle.fill",
+        },
+        "info": {
+            "title": "테스트 질문1 제목",
+            "context": "테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다. 테스트 질문1의 본문 내용입니다.",
+            "likeCount": 13,
+            "commentCount": 15,
+            "uploadDate": "dasd",
+        }
     },
     {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
+        "user": {
+            "name": "익명",
+            "mbti": "INFP"
+        },
+        "type": {
+            "name": "투표",
+            "imageName": "q.circle.fill",
+        },
+        "info": {
+            "title": "테스트 투표1 제목",
+            "context": "테스트 투표1의 본문 내용입니다. 테스트 투표1의 본문 내용입니다. 테스트 투표1의 본문 내용입니다.",
+            "likeCount": 13,
+            "commentCount": 15,
+            "uploadDate": "dasd",
+        }
     },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-    {
-        "id": 2,
-        "mbti": "ESFJ",
-        "name": "긍정버스",
-        "title": "지금우리학교는 후기",
-        "context": "일주일 정도 정주행을 했고 어쩌구저쩌구",
-        "likeCount": 25,
-        "commentCount": 45,
-        "uploadDate": "2022-02-23T14:17:00"
-    },
-
+    
 ]

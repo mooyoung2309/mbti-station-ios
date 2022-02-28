@@ -11,14 +11,14 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
+                "title": "소중한 기억",
+                "context": "나만의 소중한 기억 적고가기.",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
             }
             
         },
-        "title": "소중한 기억",
-        "context": "나만의 소중한 기억 적고가기.",
     },
     {
         "id": 1,
@@ -32,14 +32,14 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
+                "title": "소중한 기억",
+                "context": "나만의 소중한 기억 적고가기.",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
             }
             
         },
-        "title": "소중한 기억",
-        "context": "나만의 소중한 기억 적고가기.",
     },
     {
         "id": 2,
@@ -53,14 +53,14 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
+                "title": "소중한 기억",
+                "context": "나만의 소중한 기억 적고가기.",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
             }
             
         },
-        "title": "소중한 기억",
-        "context": "나만의 소중한 기억 적고가기.",
     },
     {
         "id": 3,
@@ -74,13 +74,13 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
+                "title": "소중한 기억",
+                "context": "나만의 소중한 기억 적고가기.",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
             }
             
         },
-        "title": "소중한 기억",
-        "context": "나만의 소중한 기억 적고가기.",
     },
 ]

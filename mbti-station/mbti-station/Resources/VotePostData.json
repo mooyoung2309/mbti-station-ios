@@ -11,14 +11,14 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
+                "title": "겨울 VS 여름",
+                "context": "둘 중 하나 골라봐",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
             }
             
         },
-        "title": "겨울 VS 여름",
-        "context": "둘 중 하나 골라봐",
         "options": [
             {
                 "id": 0,

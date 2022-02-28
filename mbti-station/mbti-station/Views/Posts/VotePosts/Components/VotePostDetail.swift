@@ -13,22 +13,7 @@ struct VotePostDetail: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
-                VStack(alignment: .leading) {
-                    HStack(spacing: 5) {
-                        Text(votePost.post.user.mbti)
-                            .font(.headline)
-                            .bold()
-                        Text(votePost.post.user.name)
-                            .font(.headline)
-                        Text("3시간 전")
-                            .font(.subheadline)
-                    }
-                    Text(votePost.title)
-                        .font(.title)
-                        .bold()
-                    Text(votePost.context)
-                        .font(.body)
-                }
+                PostDetail(post: votePost.post)
                 ForEach(0..<votePost.options.count) {
                     i in Option(option: votePost.options[i])
                 }
@@ -37,8 +22,7 @@ struct VotePostDetail: View {
             VoteResultChart(voteResults: votePost.options[0].results)
             Divider()
             CommentList()
-        }
-        
+        }   
     }
 }
 

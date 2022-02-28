@@ -10,8 +10,6 @@ import Foundation
 struct VotePost: Hashable, Codable, Identifiable {
     var id: Int
     var post: Post
-    var title: String
-    var context: String
     var options: [VoteOption]
 }
 

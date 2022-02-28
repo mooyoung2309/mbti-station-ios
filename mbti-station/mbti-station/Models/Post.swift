@@ -29,6 +29,8 @@ struct PostType: Hashable, Codable {
 }
 
 struct PostInfo: Hashable, Codable {
+    var title: String
+    var context: String
     var likeCount: Int
     var commentCount: Int
     var uploadDate: String

@@ -8,6 +8,4 @@
 struct QuestionPost: Hashable, Codable, Identifiable {
     var id: Int
     var post: Post
-    var title: String
-    var context: String
 }
