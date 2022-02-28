@@ -13,15 +13,19 @@ struct HomePage: View {
     var questionPosts: [QuestionPost] {
         modelData.questionPosts
     }
+    
+    var votePosts: [VotePost] {
+        modelData.votePosts
+    }
 
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
 //                PostCardScrollView(navigationTitle: "모여봐요 ✏️",posts: editorPosts)
 //                    .padding(.bottom, 20)
-                QuestionPostPreviewList(navigationTitle: "질문 게시판", questionPosts: questionPosts)
+                QuestionPostPreView(navigationTitle: "질문 게시판", questionPosts: questionPosts, limit: 3)
                     .padding(.bottom, 20)
-                QuestionPostPreviewList(navigationTitle: "질문 게시판", questionPosts: questionPosts)
+                VotePostPreView(navigationTitle: "투표 게시판", votePosts: votePosts, limit: 3)
             }
             .padding(.horizontal, 20)
             .navigationTitle("홈")

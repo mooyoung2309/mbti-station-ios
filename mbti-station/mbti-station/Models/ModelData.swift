@@ -12,6 +12,7 @@ final class ModelData: ObservableObject {
 //    @Published var posts: [Post] = load("PostData.json")
 //    @Published var editorPosts: [Post] = load("EditorPostData.json")
     @Published var questionPosts: [QuestionPost] = load("QuestionPostData.json")
+    @Published var votePosts: [VotePost] = load("VotePostData.json")
     @Published var postOptions: [PostOption] = [
         PostOption(id: 0, name: "전체", imageName: "a.circle.fill"),
         PostOption(id: 1, name: "질문", imageName: "q.circle.fill"),

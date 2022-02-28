@@ -1,0 +1,109 @@
+[
+    {
+        "id": 0,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "질문",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "title": "겨울 VS 여름",
+        "context": "둘 중 하나 골라봐",
+        "options": [
+            {
+                "id": 0,
+                "name": "겨울",
+                "results": [
+                    {
+                        "mbti": "INFP",
+                        "count": 15
+                    },
+                    {
+                        "mbti": "INFJ",
+                        "count": 15
+                    },
+                    {
+                        "mbti": "INTP",
+                        "count": 25
+                    },
+                    {
+                        "mbti": "INTJ",
+                        "count": 5
+                    },
+                    {
+                        "mbti": "ISFP",
+                        "count": 30
+                    },
+                    {
+                        "mbti": "ISFJ",
+                        "count": 0
+                    },
+                    {
+                        "mbti": "ISTP",
+                        "count": 25
+                    },
+                    {
+                        "mbti": "ISTJ",
+                        "count": 5
+                    },
+                    {
+                        "mbti": "ENFP",
+                        "count": 15
+                    },
+                    {
+                        "mbti": "ENFJ",
+                        "count": 15
+                    },
+                    {
+                        "mbti": "ENTP",
+                        "count": 25
+                    },
+                    {
+                        "mbti": "ENTJ",
+                        "count": 5
+                    },
+                    {
+                        "mbti": "ESFP",
+                        "count": 30
+                    },
+                    {
+                        "mbti": "ESFJ",
+                        "count": 0
+                    },
+                    {
+                        "mbti": "ESTP",
+                        "count": 25
+                    },
+                    {
+                        "mbti": "ESTJ",
+                        "count": 5
+                    },
+                ]
+            },
+            {
+                "id": 1,
+                "name": "여름",
+                "results": [
+                    {
+                        "mbti": "INFP",
+                        "count": 3
+                    },
+                    {
+                        "mbti": "ESFJ",
+                        "count": 27
+                    },
+                ]
+            },
+        ]
+    },
+]

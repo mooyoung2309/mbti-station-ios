@@ -14,7 +14,7 @@ struct ProfilePage: View {
                 Text("hello world!")
             }
             .padding(.horizontal, 20)
-            .navigationTitle("홈")
+            .navigationTitle("내정보")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

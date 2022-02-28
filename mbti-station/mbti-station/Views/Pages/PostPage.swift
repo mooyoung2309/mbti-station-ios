@@ -16,6 +16,14 @@ struct PostPage: View {
         modelData.postOptions
     }
     
+    var questionPosts: [QuestionPost] {
+        modelData.questionPosts
+    }
+    
+    var votePosts: [VotePost] {
+        modelData.votePosts
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
@@ -38,7 +46,24 @@ struct PostPage: View {
                         }
                     }
                     .pickerStyle(.menu)
+                }
+                VStack {
+                    ForEach(0..<votePosts.count) {
+                        i in VStack {
+                            VotePostRow(votePost: votePosts[i])
+                            
+                                Divider()
+                        }
+                    }
                     
+                    ForEach(0..<questionPosts.count) {
+                        i in VStack {
+                            QuestionPostRow(questionPost: questionPosts[i])
+                            if(i != questionPosts.count - 1) {
+                                Divider()
+                            }
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 20)
