@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         TabView {
             HomePage()
             .tabItem {
@@ -32,7 +31,6 @@ struct ContentView: View {
                     Text("내정보")
                   }
         }
-        
     }
 }
 

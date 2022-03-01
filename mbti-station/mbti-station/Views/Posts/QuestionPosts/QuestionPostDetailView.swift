@@ -15,7 +15,7 @@ struct QuestionPostDetailView: View {
             VStack {
                 QuestionPostDetail(quetionPost: questionPost)
                     .padding(.horizontal, 20)
-                Divider()
+                Divider().padding(.horizontal, 20)
                 CommentList()
             }
         }

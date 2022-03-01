@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 final class ModelData: ObservableObject {
     @Published var posts: [Post] = load("PostData.json")
@@ -17,6 +18,11 @@ final class ModelData: ObservableObject {
         PostOption(id: 0, name: "전체", imageName: "a.circle.fill"),
         PostOption(id: 1, name: "질문", imageName: "q.circle.fill"),
         PostOption(id: 2, name: "투표", imageName: "archivebox.circle.fill"),
+    ]
+    @Published var postTypeData: [String: Image] = [
+        "전체": Image(systemName: "a.circle.fill"),
+        "질문": Image(systemName: "q.circle.fill"),
+        "투표": Image(systemName: "archivebox.circle.fill"),
     ]
 }
 
