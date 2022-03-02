@@ -22,10 +22,6 @@ struct PostDetail: View {
                     .font(.subheadline)
             }
             .padding(.bottom, 3)
-            Text(post.info.title)
-                .font(.title)
-                .bold()
-                .padding(.bottom, 5)
             Text(post.info.context)
                 .font(.body)
                 .padding(.bottom, 20)

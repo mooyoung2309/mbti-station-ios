@@ -26,30 +26,26 @@ struct PostPage: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            ScrollView(showsIndicators: false) {
                 PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
-                ScrollView(showsIndicators: false) {
-                    VStack {
-                        ForEach(0..<votePosts.count) {
-                            i in VStack {
-                                VotePostRow(votePost: votePosts[i])
-                                
-                                Divider()
-                            }
+                VStack {
+                    ForEach(0..<votePosts.count) {
+                        i in VStack(spacing: 0) {
+                            VotePostRow(votePost: votePosts[i])
+                            CustomDivider(height: 10)
                         }
-                        
-                        ForEach(0..<questionPosts.count) {
-                            i in VStack {
-                                QuestionPostRow(questionPost: questionPosts[i])
-                                if(i != questionPosts.count - 1) {
-                                    Divider()
-                                }
+                    }
+                    ForEach(0..<questionPosts.count) {
+                        i in VStack(spacing: 0) {
+                            QuestionPostRow(questionPost: questionPosts[i])
+                            if(i != questionPosts.count - 1) {
+                                CustomDivider(height: 10)
                             }
                         }
                     }
                 }
             }
-            .padding(.horizontal, 20)
+            
             .navigationTitle("게시판")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -133,11 +129,12 @@ struct PostPageHeader: View {
                     }
                 }
             }
+            .padding(.horizontal, 10)
         }
         Divider()
         LazyVStack(alignment: .leading, spacing: 16) {
             HStack {
-                Text(selectionType + "게시판")
+                Text(selectionType + " 게시판")
                 Spacer()
                 Picker("Select a paint color", selection: $selectionOption) {
                     Button(action: {}) {
@@ -153,6 +150,8 @@ struct PostPageHeader: View {
             }
             .pickerStyle(.menu)
         }
+        .padding(.horizontal, 10)
+        Divider()
     }
     
 }

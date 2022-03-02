@@ -11,42 +11,51 @@ struct PostRow: View {
     var post: Post
     
     var body: some View {
-        HStack(alignment: .firstTextBaseline) {
-            VStack(alignment: .leading, spacing: 1) {
-                Text(post.info.title)
-                    .lineLimit(1)
-                    .font(.title3)
-                    .foregroundColor(.black)
-                Text(post.info.context)
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text("질문")
+                    .font(.caption)
                     .foregroundColor(Color.init(UIColor.darkGray))
-                    .lineLimit(1)
-                    .font(.body)
-                HStack(alignment: .center, spacing: 5) {
-                    Text(post.user.mbti + " " + post.user.name)
-                        .foregroundColor(Color.init(UIColor.darkGray))
-                        .font(.caption)
-                    Text("5분전")
-                        .foregroundColor(Color.init(UIColor.darkGray))
-                        .font(.caption)
-                    Spacer()
-                    HStack(alignment: .center,spacing: 2) {
-                        Image(systemName: "heart")
-                            .foregroundColor(Color.init(UIColor.darkGray))
-                            .imageScale(.small)
-                        Text(String(post.info.likeCount))
-                            .foregroundColor(Color.init(UIColor.darkGray))
-                            .font(.caption)
-                    }
-                    HStack(alignment: .center, spacing: 2) {
-                        Image(systemName: "bubble.left")
-                            .foregroundColor(Color.init(UIColor.darkGray))
-                            .imageScale(.small)
-                        Text(String(post.info.commentCount))
-                            .foregroundColor(Color.init(UIColor.darkGray))
-                            .font(.caption)
-                    }
+                    .padding(5)
+                    .background(Color.init(UIColor.systemGray5))
+                    .cornerRadius(5)
+            }
+            .padding(.horizontal, 10)
+            Text(post.info.context)
+                .foregroundColor(.black)
+                .lineLimit(2)
+                .font(.title3)
+                .padding(10)
+            HStack(alignment: .center, spacing: 5) {
+                Text(post.user.mbti + " " + post.user.name)
+                    .foregroundColor(Color.init(UIColor.darkGray))
+                    .font(.caption)
+                Spacer()
+                Text("5분전")
+                    .foregroundColor(Color.init(UIColor.darkGray))
+                    .font(.caption)
+            }
+            .padding(10)
+            Divider()
+            HStack {
+                HStack(spacing: 2) {
+                    Image(systemName: "heart")
+                        .foregroundColor(.black)
+                        .imageScale(.medium)
+                    Text("공감 " + String(post.info.likeCount))
+                        .foregroundColor(.black)
+                        .font(.body)
+                }
+                HStack(spacing: 2) {
+                    Image(systemName: "bubble.left")
+                        .foregroundColor(.black)
+                        .imageScale(.medium)
+                    Text("댓글 " + String(post.info.commentCount))
+                        .foregroundColor(.black)
+                        .font(.body)
                 }
             }
+            .padding(10)
         }
     }
 }

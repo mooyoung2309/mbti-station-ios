@@ -46,3 +46,13 @@ struct RoundedCorners: Shape {
         return path
     }
 }
+
+struct CustomDivider : View {
+    var height: CGFloat
+    
+    var body: some View {
+        Rectangle()
+            .fill(Color.init(UIColor.systemGray6))
+            .frame(height: height)
+    }
+}
