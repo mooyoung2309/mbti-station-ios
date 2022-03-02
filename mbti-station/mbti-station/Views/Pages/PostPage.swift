@@ -25,27 +25,50 @@ struct PostPage: View {
     }
     
     var body: some View {
+        
         NavigationView {
-            ScrollView(showsIndicators: false) {
-                PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
-                VStack {
-                    ForEach(0..<votePosts.count) {
-                        i in VStack(spacing: 0) {
-                            VotePostRow(votePost: votePosts[i])
-                            CustomDivider(height: 10)
-                        }
-                    }
-                    ForEach(0..<questionPosts.count) {
-                        i in VStack(spacing: 0) {
-                            QuestionPostRow(questionPost: questionPosts[i])
-                            if(i != questionPosts.count - 1) {
+            ZStack {
+                
+                ScrollView(showsIndicators: false) {
+                    PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
+                    VStack {
+                        ForEach(0..<votePosts.count) {
+                            i in VStack(spacing: 0) {
+                                VotePostRow(votePost: votePosts[i])
                                 CustomDivider(height: 10)
+                            }
+                        }
+                        ForEach(0..<questionPosts.count) {
+                            i in VStack(spacing: 0) {
+                                QuestionPostRow(questionPost: questionPosts[i])
+                                if(i != questionPosts.count - 1) {
+                                    CustomDivider(height: 10)
+                                }
                             }
                         }
                     }
                 }
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            Circle()
+                                .foregroundColor(.blue)
+                                .frame(width: 70, height: 70)
+                                .overlay(
+                                    Image(systemName: "pencil")
+                                        .resizable()
+                                        .foregroundColor(.white)
+                                        .frame(width: 35, height: 35)
+                                )
+                                .padding(10)
+                        }
+                        
+                    }
+                    
+                }
             }
-            
             .navigationTitle("게시판")
             .navigationBarTitleDisplayMode(.inline)
         }
