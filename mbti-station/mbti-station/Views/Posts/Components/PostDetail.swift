@@ -28,17 +28,19 @@ struct PostDetail: View {
                 .padding(.bottom, 5)
             Text(post.info.context)
                 .font(.body)
-                .padding(.bottom, 10)
+                .padding(.bottom, 20)
             HStack(spacing: 10) {
-                HStack(spacing: 3) {
+                HStack(spacing: 2) {
                     Image(systemName: "heart")
                         .imageScale(.medium)
-                    Text("58")
+                    Text(String(post.info.likeCount))
+                        .font(.subheadline)
                 }
-                HStack(spacing: 3) {
+                HStack(spacing: 2) {
                     Image(systemName: "bubble.left")
                         .imageScale(.medium)
-                    Text("58")
+                    Text(String(post.info.commentCount))
+                        .font(.subheadline)
                 }
             }
         }

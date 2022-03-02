@@ -29,12 +29,12 @@ struct VoteResultChart: View {
     
     var body: some View {
         VStack(spacing: 5) {
-            Text("E__P 유형")
+            Text("ESFP 유형")
                 .font(.title2)
                 .bold()
             ResultChart(lm: "I", lp: 0.2, rm: "E", rp: 0.8)
-            ResultChart(lm: "N", lp: 0.5, rm: "S", rp: 0.5)
-            ResultChart(lm: "F", lp: 0.5, rm: "T", rp: 0.5)
+            ResultChart(lm: "N", lp: 0.4, rm: "S", rp: 0.6)
+            ResultChart(lm: "F", lp: 0.6, rm: "T", rp: 0.4)
             ResultChart(lm: "P", lp: 0.9, rm: "J", rp: 0.1)
         }
     }
@@ -70,16 +70,30 @@ struct ResultChart: View {
                 Rectangle()
                     .frame(width: cw - lw, height: 10)
                     .foregroundColor(Color.init(UIColor.systemGray6))
-                Rectangle()
-                    .frame(width: lw, height: 10)
-                    .foregroundColor(.yellow)
+                if (lw >= rw) {
+                    Rectangle()
+                        .frame(width: lw, height: 10)
+                        .foregroundColor(.blue)
+                } else {
+                    Rectangle()
+                        .frame(width: lw, height: 10)
+                        .foregroundColor(.yellow)
+                }
+                
             }
             .frame(width: cw, alignment: .trailing)
             
             HStack(spacing: 0) {
-                Rectangle()
-                    .frame(width: rw, height: 10)
-                    .foregroundColor(.blue)
+                if (lw <= rw) {
+                    Rectangle()
+                        .frame(width: rw, height: 10)
+                        .foregroundColor(.blue)
+                } else {
+                    Rectangle()
+                        .frame(width: rw, height: 10)
+                        .foregroundColor(.yellow)
+                }
+                
                 Rectangle()
                     .frame(width: cw - rw, height: 10)
                     .foregroundColor(Color.init(UIColor.systemGray6))

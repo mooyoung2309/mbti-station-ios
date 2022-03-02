@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PostPage: View {
     @EnvironmentObject var modelData: ModelData
-    @State var selection: String = "최신 순"
-    @State var selectedPostType: String = "전체 게시판"
+    @State var selectionOption: String = "최신 순"
+    @State var selectionType: String = "전체"
     
     let sortOptions = ["최신 순", "좋아요 순", "댓글 순"]
     
@@ -26,41 +26,24 @@ struct PostPage: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(showsIndicators: false) {
-                PostTypeButtonScrollView()
-                Divider()
-                LazyVStack(alignment: .leading, spacing: 16) {
-                    HStack {
-                        Text("전체 게시판")
-                        Spacer()
-                        Picker("Select a paint color", selection: $selection) {
-                            Button(action: {}) {
-                                Label("최신 순", systemImage: "clock")
-                            }
-                            Button(action: {}) {
-                                Label("좋아요 순", systemImage: "heart")
-                            }
-                            Button(action: {}) {
-                                Label("댓글 순", systemImage: "bubble.left")
-                            }
-                        }
-                    }
-                    .pickerStyle(.menu)
-                }
-                VStack {
-                    ForEach(0..<votePosts.count) {
-                        i in VStack {
-                            VotePostRow(votePost: votePosts[i])
-                            
-                            Divider()
-                        }
-                    }
-                    
-                    ForEach(0..<questionPosts.count) {
-                        i in VStack {
-                            QuestionPostRow(questionPost: questionPosts[i])
-                            if(i != questionPosts.count - 1) {
+            VStack {
+                PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        ForEach(0..<votePosts.count) {
+                            i in VStack {
+                                VotePostRow(votePost: votePosts[i])
+                                
                                 Divider()
+                            }
+                        }
+                        
+                        ForEach(0..<questionPosts.count) {
+                            i in VStack {
+                                QuestionPostRow(questionPost: questionPosts[i])
+                                if(i != questionPosts.count - 1) {
+                                    Divider()
+                                }
                             }
                         }
                     }
@@ -70,11 +53,14 @@ struct PostPage: View {
             .navigationTitle("게시판")
             .navigationBarTitleDisplayMode(.inline)
         }
+        
     }
 }
 
-struct PostTypeButtonScrollView: View {
-    @State var selection = "전체"
+struct PostPageHeader: View {
+    @Binding var selectionOption: String
+    @Binding var selectionType: String
+    
     @State var postImages: [Image] = [
         Image(systemName: "a.circle.fill"),
         Image(systemName: "moon.circle.fill"),
@@ -82,32 +68,93 @@ struct PostTypeButtonScrollView: View {
     ]
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                VStack {
-                    postImages[0]
-                        .imageScale(.large)
-                        .foregroundColor(.black)
-                        .font(.largeTitle)
-                    Text("전체")
-                }
-                VStack {
-                    postImages[1]
-                        .imageScale(.large)
-                        .foregroundColor(.black)
-                        .font(.largeTitle)
-                    Text("질문")
-                }
-                VStack {
-                    postImages[2]
-                        .imageScale(.large)
-                        .foregroundColor(.black)
-                        .font(.largeTitle)
-                    Text("투표")
+        VStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    Button(action: {
+                        selectionType = "전체"
+                    }) {
+                        VStack {
+                            if (selectionType == "전체") {
+                                postImages[0]
+                                    .imageScale(.large)
+                                    .foregroundColor(.blue)
+                                    .font(.title)
+                            } else {
+                                postImages[0]
+                                    .imageScale(.large)
+                                    .foregroundColor(.black)
+                                    .font(.title)
+                            }
+                            Text("전체")
+                                .foregroundColor(.black)
+                                .font(.subheadline)
+                        }
+                    }
+                    Button(action:{
+                        selectionType = "질문"
+                    }) {
+                        VStack {
+                            if (selectionType == "질문") {
+                                postImages[1]
+                                    .imageScale(.large)
+                                    .foregroundColor(.blue)
+                                    .font(.title)
+                            } else {
+                                postImages[1]
+                                    .imageScale(.large)
+                                    .foregroundColor(.black)
+                                    .font(.title)
+                            }
+                            Text("질문")
+                                .foregroundColor(.black)
+                                .font(.subheadline)
+                        }
+                    }
+                    Button(action:{
+                        selectionType = "투표"
+                    }) {
+                        VStack {
+                            if (selectionType == "투표") {
+                                postImages[2]
+                                    .imageScale(.large)
+                                    .foregroundColor(.blue)
+                                    .font(.title)
+                            } else {
+                                postImages[2]
+                                    .imageScale(.large)
+                                    .foregroundColor(.black)
+                                    .font(.title)
+                            }
+                            Text("투표")
+                                .foregroundColor(.black)
+                                .font(.subheadline)
+                        }
+                    }
                 }
             }
         }
+        Divider()
+        LazyVStack(alignment: .leading, spacing: 16) {
+            HStack {
+                Text(selectionType + "게시판")
+                Spacer()
+                Picker("Select a paint color", selection: $selectionOption) {
+                    Button(action: {}) {
+                        Label("최신 순", systemImage: "clock")
+                    }
+                    Button(action: {}) {
+                        Label("좋아요 순", systemImage: "heart")
+                    }
+                    Button(action: {}) {
+                        Label("댓글 순", systemImage: "bubble.left")
+                    }
+                }
+            }
+            .pickerStyle(.menu)
+        }
     }
+    
 }
 
 struct PostPage_Previews: PreviewProvider {
