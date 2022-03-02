@@ -27,7 +27,6 @@ struct PostPage: View {
     var body: some View {
         NavigationView {
             ZStack {
-                
                 ScrollView(showsIndicators: false) {
                     PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
                     VStack {

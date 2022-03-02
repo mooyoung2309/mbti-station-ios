@@ -44,7 +44,7 @@ struct CreatePostView: View {
                 CreatePostRule()
             }
         }
-        .navigationTitle("글 쓰기")
+        .navigationTitle(Text("글 쓰기"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button("완료") {
@@ -52,6 +52,7 @@ struct CreatePostView: View {
             }
         }
     }
+    
 }
 
 struct CreatePostView_Previews: PreviewProvider {
