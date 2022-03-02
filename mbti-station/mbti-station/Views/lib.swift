@@ -56,3 +56,52 @@ struct CustomDivider : View {
             .frame(height: height)
     }
 }
+
+struct TextEditorView: View {
+    @Binding var string: String
+    @State var textEditorHeight : CGFloat = 20
+    var font: Font
+    var canSpace: Bool
+    
+    var body: some View {
+        
+        ZStack(alignment: .leading) {
+            Text(string)
+                .font(.system(.body))
+                .foregroundColor(.clear)
+                .padding(14)
+                .background(GeometryReader {
+                    Color.clear.preference(key: ViewHeightKey.self,
+                                           value: $0.frame(in: .local).size.height)
+                })
+            if canSpace == true {
+                TextEditor(text: $string)
+                    .font(font)
+                    .frame(height: max(40,textEditorHeight))
+                    .padding()
+            } else {
+                TextEditor(text: $string)
+                    .font(font)
+                    .frame(height: max(40,textEditorHeight))
+                    .padding()
+                    .onChange(of: string) { value in
+                            if value.contains("\n") {
+                                string = value.replacingOccurrences(of: "\n", with: "")
+                            }
+                        }
+            }
+            
+            
+        }.onPreferenceChange(ViewHeightKey.self) { textEditorHeight = $0 }
+        
+    }
+    
+}
+
+
+struct ViewHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat { 0 }
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value = value + nextValue()
+    }
+}

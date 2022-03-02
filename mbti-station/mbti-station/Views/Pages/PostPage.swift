@@ -25,7 +25,6 @@ struct PostPage: View {
     }
     
     var body: some View {
-        
         NavigationView {
             ZStack {
                 
@@ -52,7 +51,9 @@ struct PostPage: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        Button(action: {}) {
+                        NavigationLink {
+                            CreatePostView()
+                        } label: {
                             Circle()
                                 .foregroundColor(.blue)
                                 .frame(width: 70, height: 70)
@@ -64,6 +65,18 @@ struct PostPage: View {
                                 )
                                 .padding(10)
                         }
+                        //                        Button(action: {}) {
+                        //                            Circle()
+                        //                                .foregroundColor(.blue)
+                        //                                .frame(width: 70, height: 70)
+                        //                                .overlay(
+                        //                                    Image(systemName: "pencil")
+                        //                                        .resizable()
+                        //                                        .foregroundColor(.white)
+                        //                                        .frame(width: 35, height: 35)
+                        //                                )
+                        //                                .padding(10)
+                        //                        }
                         
                     }
                     
@@ -102,7 +115,7 @@ struct PostPageHeader: View {
                             } else {
                                 postImages[0]
                                     .imageScale(.large)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color.init(UIColor.systemGray4))
                                     .font(.title)
                             }
                             Text("전체")
@@ -122,7 +135,7 @@ struct PostPageHeader: View {
                             } else {
                                 postImages[1]
                                     .imageScale(.large)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color.init(UIColor.systemGray4))
                                     .font(.title)
                             }
                             Text("질문")
@@ -142,8 +155,21 @@ struct PostPageHeader: View {
                             } else {
                                 postImages[2]
                                     .imageScale(.large)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(Color.init(UIColor.systemGray4))
                                     .font(.title)
+                                //                                Circle()
+                                //                                    .foregroundColor(Color.init(UIColor.systemGray6))
+                                //                                    .frame(width: 40, height: 40)
+                                //                                    .overlay(
+                                //                                        postImages[2]
+                                //                                            .resizable()
+                                //                                            .scaledToFit()
+                                //                                            .padding(11)
+                                //                                            .imageScale(.large)
+                                //                                            .foregroundColor(Color.init(UIColor.green))
+                                //                                            .font(.title)
+                                //                                    )
+                                
                             }
                             Text("투표")
                                 .foregroundColor(.black)
@@ -176,7 +202,6 @@ struct PostPageHeader: View {
         .padding(.horizontal, 10)
         Divider()
     }
-    
 }
 
 struct PostPage_Previews: PreviewProvider {

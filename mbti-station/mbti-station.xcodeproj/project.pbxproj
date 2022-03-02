@@ -47,6 +47,8 @@
 		70D022DF27C7413A0048FC86 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D022DE27C7413A0048FC86 /* Post.swift */; };
 		70D022E127C7422D0048FC86 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D022E027C7422D0048FC86 /* ModelData.swift */; };
 		70D022E427C742D50048FC86 /* PostData.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D022E327C742D50048FC86 /* PostData.json */; };
+		70D487BB27CF4C1100DCA33E /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D487BA27CF4C1100DCA33E /* CreatePostView.swift */; };
+		70D487BD27CF58A800DCA33E /* CreatePostRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D487BC27CF58A800DCA33E /* CreatePostRule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		70D022DE27C7413A0048FC86 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		70D022E027C7422D0048FC86 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		70D022E327C742D50048FC86 /* PostData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PostData.json; sourceTree = "<group>"; };
+		70D487BA27CF4C1100DCA33E /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		70D487BC27CF58A800DCA33E /* CreatePostRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 			children = (
 				70AAB72327CCD8660007FCAC /* PostRow.swift */,
 				70AAB72627CCDAA70007FCAC /* PostDetail.swift */,
+				70D487BA27CF4C1100DCA33E /* CreatePostView.swift */,
+				70D487BC27CF58A800DCA33E /* CreatePostRule.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -460,9 +466,11 @@
 				70CF4DC027C9272800506C65 /* VotePost.swift in Sources */,
 				70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */,
 				70AAB72927CCDDFE0007FCAC /* QuestionPostDetailView.swift in Sources */,
+				70D487BB27CF4C1100DCA33E /* CreatePostView.swift in Sources */,
 				705FACBD27C8977800AC2AC1 /* PostPage.swift in Sources */,
 				7067991527CCB0BF00B9CBDE /* VotePostPreView.swift in Sources */,
 				7067991B27CCB34F00B9CBDE /* QuestionPostView.swift in Sources */,
+				70D487BD27CF58A800DCA33E /* CreatePostRule.swift in Sources */,
 				705FACB927C8939400AC2AC1 /* UserInfo.swift in Sources */,
 				7067990A27CC732C00B9CBDE /* VoteResultChart.swift in Sources */,
 				7067991327CC992A00B9CBDE /* VotePostDetailView.swift in Sources */,
