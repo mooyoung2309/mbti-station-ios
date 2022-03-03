@@ -12,7 +12,17 @@ struct VotePostDetailView: View {
     
     var body: some View {
         ScrollView {
-            VotePostDetail(votePost: votePost)
+            VStack(alignment: .leading) {
+                PostDetail(post: votePost.post)
+                VoteOptionView(options: votePost.options)
+                HStack {
+                    Spacer()
+                    VoteResultChart(voteResults: votePost.options[0].results)
+                    Spacer()
+                }
+                PostDetailReact(info: votePost.post.info)
+                CommentList()
+            }
         }
     }
 }

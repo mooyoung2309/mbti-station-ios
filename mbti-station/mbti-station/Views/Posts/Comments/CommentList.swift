@@ -9,13 +9,11 @@ import SwiftUI
 
 struct CommentList: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             CommentRow()
-            Divider()
             CommentRow()
-            Divider()
             CommentRow()
-            Divider()
+
             CommentRow()
         }
         

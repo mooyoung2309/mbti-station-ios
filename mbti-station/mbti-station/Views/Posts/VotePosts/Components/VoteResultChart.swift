@@ -68,15 +68,15 @@ struct ResultChart: View {
                 .font(.title2)
             HStack(spacing: 0) {
                 Rectangle()
-                    .frame(width: cw - lw, height: 10)
+                    .frame(width: cw - lw, height: 15)
                     .foregroundColor(Color.init(UIColor.systemGray6))
                 if (lw >= rw) {
                     Rectangle()
-                        .frame(width: lw, height: 10)
+                        .frame(width: lw, height: 15)
                         .foregroundColor(.blue)
                 } else {
                     Rectangle()
-                        .frame(width: lw, height: 10)
+                        .frame(width: lw, height: 15)
                         .foregroundColor(.yellow)
                 }
                 
@@ -86,16 +86,16 @@ struct ResultChart: View {
             HStack(spacing: 0) {
                 if (lw <= rw) {
                     Rectangle()
-                        .frame(width: rw, height: 10)
+                        .frame(width: rw, height: 15)
                         .foregroundColor(.blue)
                 } else {
                     Rectangle()
-                        .frame(width: rw, height: 10)
+                        .frame(width: rw, height: 15)
                         .foregroundColor(.yellow)
                 }
                 
                 Rectangle()
-                    .frame(width: cw - rw, height: 10)
+                    .frame(width: cw - rw, height: 15)
                     .foregroundColor(Color.init(UIColor.systemGray6))
             }
             .frame(width: cw, alignment: .leading)

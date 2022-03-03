@@ -12,14 +12,7 @@ struct VotePostDetail: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading) {
-                PostDetail(post: votePost.post)
-                ForEach(0..<votePost.options.count) {
-                    i in Option(option: votePost.options[i])
-                }
-            }
-            .padding([.horizontal, .bottom], 20)
-            VoteResultChart(voteResults: votePost.options[0].results)
+            
             Divider()
             CommentList()
         }   

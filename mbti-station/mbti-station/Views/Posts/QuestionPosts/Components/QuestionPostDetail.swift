@@ -11,11 +11,9 @@ struct QuestionPostDetail: View {
     var quetionPost: QuestionPost
     
     var body: some View {
-        VStack {
-            HStack {
-                PostDetail(post: quetionPost.post)
-                Spacer()
-            }
+        VStack(alignment: .leading) {
+            PostDetail(post: quetionPost.post)
+            PostDetailReact(info: quetionPost.post.info)
         }
     }
 }

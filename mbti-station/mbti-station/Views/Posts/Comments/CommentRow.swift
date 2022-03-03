@@ -19,16 +19,16 @@ struct CommentRow: View {
                     .font(.subheadline)
                 Spacer()
             }
-            .padding(.bottom, 3)
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10))
             Text("테스트 댓글 입니다. 테스트 댓글입니다. 테스트 댓글 입니다. 테스트 댓글입니다.")
-                .padding(.bottom, 10)
+                .padding(.horizontal, 10)
             HStack(spacing: 3) {
                 Image(systemName: "heart")
                     .imageScale(.medium)
                 Text("58")
             }
+            .padding(10)
         }
-        .padding(.horizontal, 20)
     }
 }
 

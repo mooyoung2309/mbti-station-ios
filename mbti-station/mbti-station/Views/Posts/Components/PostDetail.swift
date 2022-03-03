@@ -11,37 +11,68 @@ struct PostDetail: View {
     var post: Post
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HStack(spacing: 5) {
-                Text(post.user.mbti)
-                    .font(.headline)
-                    .bold()
-                Text(post.user.name)
-                    .font(.headline)
-                Text("3시간 전")
-                    .font(.subheadline)
+        VStack(alignment: .leading, spacing: 1) {
+            HStack {
+                Text("질문")
+                    .font(.caption)
+                    .foregroundColor(Color.init(UIColor.darkGray))
+                    .padding(5)
+                    .background(Color.init(UIColor.systemGray5))
+                    .cornerRadius(5)
             }
-            .padding(.bottom, 3)
+            .padding(10)
+            
+            Text(post.user.mbti + " " + post.user.name)
+                .font(.headline)
+                .padding(.horizontal, 10)
+            
+            Text("5분전")
+                .foregroundColor(Color.init(UIColor.darkGray))
+                .font(.caption)
+                .padding(.horizontal, 10)
+            
+            Divider()
+                .padding(10)
+            
             Text(post.info.context)
+                .foregroundColor(.black)
                 .font(.body)
-                .padding(.bottom, 20)
-            HStack(spacing: 10) {
-                HStack(spacing: 2) {
-                    Image(systemName: "heart")
-                        .imageScale(.medium)
-                    Text(String(post.info.likeCount))
-                        .font(.subheadline)
-                }
-                HStack(spacing: 2) {
-                    Image(systemName: "bubble.left")
-                        .imageScale(.medium)
-                    Text(String(post.info.commentCount))
-                        .font(.subheadline)
-                }
-            }
+                .padding(10)
         }
     }
     
+}
+
+struct PostDetailReact: View {
+    var info: PostInfo
+    
+    var body: some View {
+        Divider()
+            .padding(.vertical, 10)
+        
+        HStack(spacing: 10) {
+            HStack(spacing: 2) {
+                Image(systemName: "heart")
+                    .foregroundColor(.black)
+                    .imageScale(.medium)
+                Text("공감 " + String(info.likeCount))
+                    .foregroundColor(.black)
+                    .font(.body)
+            }
+            HStack(spacing: 2) {
+                Image(systemName: "bubble.left")
+                    .foregroundColor(.black)
+                    .imageScale(.medium)
+                Text("댓글 " + String(info.commentCount))
+                    .foregroundColor(.black)
+                    .font(.body)
+            }
+        }
+        .padding(.horizontal, 10)
+        
+        Divider()
+            .padding(.vertical, 10)
+    }
 }
 
 struct PostDetail_Previews: PreviewProvider {

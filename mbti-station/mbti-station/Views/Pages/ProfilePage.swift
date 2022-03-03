@@ -11,7 +11,18 @@ struct ProfilePage: View {
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {
-                Text("hello world!")
+                VStack(alignment: .leading) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("INFP")
+                                .bold()
+                                .font(.title3)
+                            Text("익명")
+                                .font(.body)
+                        }
+                        Spacer()
+                    }
+                }
             }
             .padding(.horizontal, 20)
             .navigationTitle("내정보")
