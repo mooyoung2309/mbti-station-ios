@@ -14,6 +14,7 @@
 		700B4CC727C9DA56003ADB34 /* VotePostData.json in Resources */ = {isa = PBXBuildFile; fileRef = 700B4CC627C9DA56003ADB34 /* VotePostData.json */; };
 		700B4CCA27C9DCC5003ADB34 /* VotePostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700B4CC927C9DCC4003ADB34 /* VotePostRow.swift */; };
 		702564E527CF991300ED570E /* VoteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702564E427CF991300ED570E /* VoteContent.swift */; };
+		7025E73427D1FD2F00CA919E /* BalanceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7025E73327D1FD2F00CA919E /* BalanceRow.swift */; };
 		7028737F27D07AB700EA10A8 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7028737E27D07AB700EA10A8 /* VoteOptionView.swift */; };
 		705FACB927C8939400AC2AC1 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACB827C8939400AC2AC1 /* UserInfo.swift */; };
 		705FACBB27C893AC00AC2AC1 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACBA27C893AC00AC2AC1 /* ProfilePage.swift */; };
@@ -78,6 +79,7 @@
 		700B4CC627C9DA56003ADB34 /* VotePostData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = VotePostData.json; sourceTree = "<group>"; };
 		700B4CC927C9DCC4003ADB34 /* VotePostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotePostRow.swift; sourceTree = "<group>"; };
 		702564E427CF991300ED570E /* VoteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteContent.swift; sourceTree = "<group>"; };
+		7025E73327D1FD2F00CA919E /* BalanceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRow.swift; sourceTree = "<group>"; };
 		7028737E27D07AB700EA10A8 /* VoteOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOptionView.swift; sourceTree = "<group>"; };
 		705FACB827C8939400AC2AC1 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		705FACBA27C893AC00AC2AC1 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
@@ -164,6 +166,14 @@
 				7067991227CC992A00B9CBDE /* VotePostDetailView.swift */,
 			);
 			path = VotePosts;
+			sourceTree = "<group>";
+		};
+		7025E73227D1F4FB00CA919E /* Contents */ = {
+			isa = PBXGroup;
+			children = (
+				7025E73327D1FD2F00CA919E /* BalanceRow.swift */,
+			);
+			path = Contents;
 			sourceTree = "<group>";
 		};
 		703B6F8127C8D81F005778F2 /* QuestionPosts */ = {
@@ -289,6 +299,7 @@
 			children = (
 				70AFB7F027C6391A00E04F64 /* ContentView.swift */,
 				700A9D2C27C7723900FA9473 /* Pages */,
+				7025E73227D1F4FB00CA919E /* Contents */,
 				70D022D827C734100048FC86 /* Posts */,
 				705FACB727C8935D00AC2AC1 /* Profiles */,
 				7067990B27CC7A9100B9CBDE /* lib.swift */,
@@ -485,6 +496,7 @@
 				705FACBB27C893AC00AC2AC1 /* ProfilePage.swift in Sources */,
 				7028737F27D07AB700EA10A8 /* VoteOptionView.swift in Sources */,
 				705FACBF27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift in Sources */,
+				7025E73427D1FD2F00CA919E /* BalanceRow.swift in Sources */,
 				705FACC127C89B9900AC2AC1 /* PostOption.swift in Sources */,
 				70D022E127C7422D0048FC86 /* ModelData.swift in Sources */,
 				7067991D27CCB38700B9CBDE /* QuestionPostPreView.swift in Sources */,

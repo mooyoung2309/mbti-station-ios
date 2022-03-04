@@ -8,26 +8,44 @@
 import SwiftUI
 
 struct HomePage: View {
-    @EnvironmentObject var modelData: ModelData
-
-    var questionPosts: [QuestionPost] {
-        modelData.questionPosts
-    }
-    
-    var votePosts: [VotePost] {
-        modelData.votePosts
-    }
-
     var body: some View {
         NavigationView {
-            ScrollView(showsIndicators: false) {
-//                PostCardScrollView(navigationTitle: "모여봐요 ✏️",posts: editorPosts)
-//                    .padding(.bottom, 20)
-                QuestionPostPreView(navigationTitle: "질문 게시판", questionPosts: questionPosts, limit: 3)
-                    .padding(.bottom, 20)
-                VotePostPreView(navigationTitle: "투표 게시판", votePosts: votePosts, limit: 3)
+            ScrollView {
+                VStack() {
+                    HStack () {
+                        Text("밸런스 게임")
+                            .bold()
+                            .font(.title)
+                        Spacer()
+                    }
+                    .padding(10)
+                    
+                    HStack(alignment: .center, spacing: 30) {
+                        BalanceRow()
+                        BalanceRow()
+                        BalanceRow()
+                    }.modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 10))
+                        .frame(width: 100)
+                }
+                
+                VStack() {
+                    HStack () {
+                        Text("밸런스 게임")
+                            .bold()
+                            .font(.title)
+                        Spacer()
+                    }
+                    .padding(10)
+                    
+                    HStack(alignment: .center, spacing: 30) {
+                        BalanceRow()
+                        BalanceRow()
+                        BalanceRow()
+                    }.modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 10))
+                        .frame(width: 100)
+                }
             }
-            .padding(.horizontal, 20)
+            .background(Color.init(UIColor.systemGray6))
             .navigationTitle("홈")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -36,6 +54,6 @@ struct HomePage: View {
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage().environmentObject(ModelData())
+        HomePage()
     }
 }

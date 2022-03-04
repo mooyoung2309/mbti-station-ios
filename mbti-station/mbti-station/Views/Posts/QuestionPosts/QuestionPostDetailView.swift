@@ -14,8 +14,6 @@ struct QuestionPostDetailView: View {
         ScrollView {
             VStack {
                 QuestionPostDetail(quetionPost: questionPost)
-                    .padding(.horizontal, 20)
-                Divider().padding(.horizontal, 20)
                 CommentList()
             }
         }
