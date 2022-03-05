@@ -13,39 +13,25 @@ struct HomePage: View {
             ScrollView {
                 VStack() {
                     HStack () {
-                        Text("밸런스 게임")
+                        Text("인기 밸런스 게임")
                             .bold()
                             .font(.title)
+                        
                         Spacer()
+                        Text("모두 보기")
+                            .foregroundColor(.blue)
                     }
-                    .padding(10)
+                    .padding(.horizontal, 20)
                     
                     HStack(alignment: .center, spacing: 30) {
-                        BalanceRow()
-                        BalanceRow()
-                        BalanceRow()
+                        BalanceCard()
+                        BalanceCard()
+                        BalanceCard()
                     }.modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 10))
                         .frame(width: 100)
                 }
                 
-                VStack() {
-                    HStack () {
-                        Text("밸런스 게임")
-                            .bold()
-                            .font(.title)
-                        Spacer()
-                    }
-                    .padding(10)
-                    
-                    HStack(alignment: .center, spacing: 30) {
-                        BalanceRow()
-                        BalanceRow()
-                        BalanceRow()
-                    }.modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 10))
-                        .frame(width: 100)
-                }
             }
-            .background(Color.init(UIColor.systemGray6))
             .navigationTitle("홈")
             .navigationBarTitleDisplayMode(.inline)
         }

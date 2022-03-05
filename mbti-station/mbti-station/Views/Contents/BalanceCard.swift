@@ -1,13 +1,13 @@
 //
-//  BalanceRow.swift
+//  BalanceCard.swift
 //  mbti-station
 //
-//  Created by 송영모 on 2022/03/04.
+//  Created by 송영모 on 2022/03/05.
 //
 
 import SwiftUI
 
-struct BalanceRow: View {
+struct BalanceCard: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             HStack {
@@ -43,7 +43,8 @@ struct BalanceRow: View {
                 .background(
                     Rectangle()
                         .fill(Color.init(UIColor.white))
-                        .cornerRadius(5))
+                        .cornerRadius(10)
+                        .shadow(color: Color.init(UIColor.systemGray5), radius: 10, x: 0, y: 10))
                 Text("VS")
                     .font(.subheadline)
                 VStack {
@@ -62,37 +63,6 @@ struct BalanceRow: View {
                 )
             }
             .padding(10)
-//            HStack(alignment: .center, spacing: 5) {
-//                Text("INFP" + " " + "익명")
-//                    .foregroundColor(Color.init(UIColor.darkGray))
-//                    .font(.caption)
-//                Spacer()
-//                Text("5분전")
-//                    .foregroundColor(Color.init(UIColor.darkGray))
-//                    .font(.caption)
-//            }
-//            .padding(10)
-//            Divider()
-//            HStack {
-//                HStack(spacing: 2) {
-//                    Image(systemName: "heart")
-//                        .foregroundColor(.black)
-//                        .imageScale(.medium)
-//                    Text("공감 " + String(13))
-//                        .foregroundColor(.black)
-//                        .font(.body)
-//                }
-//                HStack(spacing: 2) {
-//                    Image(systemName: "bubble.left")
-//                        .foregroundColor(.black)
-//                        .imageScale(.medium)
-//                    Text("댓글 " + String(15))
-//                        .foregroundColor(.black)
-//                        .font(.body)
-//                }
-//                Spacer()
-//            }
-//            .padding(10)
         }
         .frame(width: 300, height: 230, alignment: .center)
         .background(
@@ -104,8 +74,8 @@ struct BalanceRow: View {
     }
 }
 
-struct BalanceRow_Previews: PreviewProvider {
+struct BalanceCard_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceRow()
+        BalanceCard()
     }
 }
