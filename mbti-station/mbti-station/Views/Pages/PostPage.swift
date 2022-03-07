@@ -51,7 +51,15 @@ struct PostPage: View {
                     HStack {
                         Spacer()
                         NavigationLink {
-                            CreatePostView()
+//                            CreatePostView()
+                            BalancePostingView()
+                                .navigationTitle(Text("글 쓰기"))
+                                .navigationBarTitleDisplayMode(.inline)
+                                .toolbar {
+                                    Button("완료") {
+                                        print("Help tapped!")
+                                    }
+                                }
                         } label: {
                             Circle()
                                 .foregroundColor(.blue)

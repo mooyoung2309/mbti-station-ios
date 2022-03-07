@@ -37,6 +37,8 @@
 		7067991D27CCB38700B9CBDE /* QuestionPostPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067991C27CCB38700B9CBDE /* QuestionPostPreView.swift */; };
 		708469A527CA06F30082D0B4 /* VotePostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708469A427CA06F30082D0B4 /* VotePostDetail.swift */; };
 		708BA75427D5AC960084FB98 /* BalanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BA75327D5AC960084FB98 /* BalanceListView.swift */; };
+		708BA75727D5B3590084FB98 /* BalancePostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BA75627D5B3590084FB98 /* BalancePostingView.swift */; };
+		708BA75927D5C5E00084FB98 /* PostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708BA75827D5C5E00084FB98 /* PostingView.swift */; };
 		70AAB72427CCD8660007FCAC /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AAB72327CCD8660007FCAC /* PostRow.swift */; };
 		70AAB72727CCDAA70007FCAC /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AAB72627CCDAA70007FCAC /* PostDetail.swift */; };
 		70AAB72927CCDDFE0007FCAC /* QuestionPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AAB72827CCDDFE0007FCAC /* QuestionPostDetailView.swift */; };
@@ -104,6 +106,8 @@
 		7067991C27CCB38700B9CBDE /* QuestionPostPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPostPreView.swift; sourceTree = "<group>"; };
 		708469A427CA06F30082D0B4 /* VotePostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotePostDetail.swift; sourceTree = "<group>"; };
 		708BA75327D5AC960084FB98 /* BalanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceListView.swift; sourceTree = "<group>"; };
+		708BA75627D5B3590084FB98 /* BalancePostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePostingView.swift; sourceTree = "<group>"; };
+		708BA75827D5C5E00084FB98 /* PostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingView.swift; sourceTree = "<group>"; };
 		70AAB72327CCD8660007FCAC /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
 		70AAB72627CCDAA70007FCAC /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 		70AAB72827CCDDFE0007FCAC /* QuestionPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPostDetailView.swift; sourceTree = "<group>"; };
@@ -175,7 +179,6 @@
 		7025E73227D1F4FB00CA919E /* Contents */ = {
 			isa = PBXGroup;
 			children = (
-				708BA75227D5AC3D0084FB98 /* Balance */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -232,11 +235,20 @@
 		708BA75227D5AC3D0084FB98 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
-				7025E73327D1FD2F00CA919E /* BalanceRow.swift */,
-				701357F327D38984003300B2 /* BalanceCard.swift */,
+				708BA75527D5B32A0084FB98 /* Components */,
 				708BA75327D5AC960084FB98 /* BalanceListView.swift */,
+				708BA75627D5B3590084FB98 /* BalancePostingView.swift */,
 			);
 			path = Balance;
+			sourceTree = "<group>";
+		};
+		708BA75527D5B32A0084FB98 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7025E73327D1FD2F00CA919E /* BalanceRow.swift */,
+				701357F327D38984003300B2 /* BalanceCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		70AAB72527CCD9250007FCAC /* Components */ = {
@@ -246,6 +258,7 @@
 				70AAB72627CCDAA70007FCAC /* PostDetail.swift */,
 				70D487BA27CF4C1100DCA33E /* CreatePostView.swift */,
 				70D487BC27CF58A800DCA33E /* CreatePostRule.swift */,
+				708BA75827D5C5E00084FB98 /* PostingView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -327,6 +340,7 @@
 				70AAB72527CCD9250007FCAC /* Components */,
 				7067990F27CC986B00B9CBDE /* Comments */,
 				703B6F8127C8D81F005778F2 /* QuestionPosts */,
+				708BA75227D5AC3D0084FB98 /* Balance */,
 				700B4CC827C9DC84003ADB34 /* VotePosts */,
 				700A9D2F27C7781C00FA9473 /* PostCard.swift */,
 				700A9D3327C77DC700FA9473 /* PostCardScrollView.swift */,
@@ -496,6 +510,7 @@
 				7067990E27CC981C00B9CBDE /* CommentList.swift in Sources */,
 				70CF4DC027C9272800506C65 /* VotePost.swift in Sources */,
 				70AFB7F127C6391A00E04F64 /* ContentView.swift in Sources */,
+				708BA75927D5C5E00084FB98 /* PostingView.swift in Sources */,
 				70AAB72927CCDDFE0007FCAC /* QuestionPostDetailView.swift in Sources */,
 				70D487BB27CF4C1100DCA33E /* CreatePostView.swift in Sources */,
 				705FACBD27C8977800AC2AC1 /* PostPage.swift in Sources */,
@@ -527,6 +542,7 @@
 				70AAB72427CCD8660007FCAC /* PostRow.swift in Sources */,
 				70D022DF27C7413A0048FC86 /* Post.swift in Sources */,
 				70AAB72D27CCDF300007FCAC /* QuestionPostDetail.swift in Sources */,
+				708BA75727D5B3590084FB98 /* BalancePostingView.swift in Sources */,
 				708469A527CA06F30082D0B4 /* VotePostDetail.swift in Sources */,
 				700A9D2E27C7726300FA9473 /* HomePage.swift in Sources */,
 				700A9D3427C77DC700FA9473 /* PostCardScrollView.swift in Sources */,

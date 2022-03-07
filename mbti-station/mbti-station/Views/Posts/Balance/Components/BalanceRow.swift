@@ -27,7 +27,7 @@ struct BalanceRow: View {
                 .padding(.horizontal, 10)
             
             HStack {
-                Text("A")
+                Text("1")
                     .font(.body)
                     .foregroundColor(Color.init(UIColor.black))
                     .padding(5)
@@ -43,7 +43,7 @@ struct BalanceRow: View {
             .padding(.horizontal, 10)
             
             HStack {
-                Text("B")
+                Text("2")
                     .font(.body)
                     .foregroundColor(Color.init(UIColor.black))
                     .padding(5)
