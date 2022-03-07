@@ -52,7 +52,8 @@ struct PostPage: View {
                         Spacer()
                         NavigationLink {
 //                            CreatePostView()
-                            BalancePostingView()
+                            PostingView()
+//                            BalancePostingView()
                                 .navigationTitle(Text("글 쓰기"))
                                 .navigationBarTitleDisplayMode(.inline)
                                 .toolbar {
