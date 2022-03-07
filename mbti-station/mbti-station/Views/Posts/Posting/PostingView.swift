@@ -10,9 +10,9 @@ import SwiftUI
 struct PostingView: View {
     @State var selection: String = "질문"
     var options: [String] = [
-        "질문",
-        "투표",
-        "밸런스 게임"
+        "✏️ 질문",
+        "📦 투표",
+        "🕹 밸런스 게임"
     ]
     var body: some View {
         ScrollView {
@@ -28,7 +28,10 @@ struct PostingView: View {
                 .padding(.vertical, 20)
                 if selection == "질문" {
                     QuestionPostingView()
-                } else if (selection == "밸런스 게임") {
+                } else if (selection == "투표") {
+                    VotePostingView()
+                }
+                else if (selection == "밸런스 게임") {
                     BalancePostingView()
                 }
             }
@@ -46,18 +49,18 @@ private struct PostingViewOption: View {
         }) {
             if option == selection {
                 Text(option)
-                    .font(.body)
+                    .font(.caption)
                     .foregroundColor(Color.init(UIColor.systemBlue))
-                    .padding(5)
+                    .padding(10)
                     .background(Color.init(UIColor.systemGray6))
-                    .cornerRadius(5)
+                    .cornerRadius(20)
             } else {
                 Text(option)
-                    .font(.body)
+                    .font(.caption)
                     .foregroundColor(Color.init(UIColor.black))
-                    .padding(5)
+                    .padding(10)
                     .background(Color.init(UIColor.systemGray6))
-                    .cornerRadius(5)
+                    .cornerRadius(20)
             }
         }
     }

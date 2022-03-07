@@ -16,6 +16,7 @@ struct ContentView: View {
                     Text("홈")
                   }
             PostPage()
+                .environmentObject(ModelData())
             .tabItem {
                     Image(systemName: "doc.plaintext.fill")
                     Text("게시판")

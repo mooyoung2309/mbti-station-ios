@@ -51,16 +51,7 @@ struct PostPage: View {
                     HStack {
                         Spacer()
                         NavigationLink {
-//                            CreatePostView()
                             PostingView()
-//                            BalancePostingView()
-                                .navigationTitle(Text("글 쓰기"))
-                                .navigationBarTitleDisplayMode(.inline)
-                                .toolbar {
-                                    Button("완료") {
-                                        print("Help tapped!")
-                                    }
-                                }
                         } label: {
                             Circle()
                                 .foregroundColor(.blue)
@@ -73,21 +64,7 @@ struct PostPage: View {
                                 )
                                 .padding(10)
                         }
-                        //                        Button(action: {}) {
-                        //                            Circle()
-                        //                                .foregroundColor(.blue)
-                        //                                .frame(width: 70, height: 70)
-                        //                                .overlay(
-                        //                                    Image(systemName: "pencil")
-                        //                                        .resizable()
-                        //                                        .foregroundColor(.white)
-                        //                                        .frame(width: 35, height: 35)
-                        //                                )
-                        //                                .padding(10)
-                        //                        }
-                        
                     }
-                    
                 }
             }
             .navigationTitle("게시판")
