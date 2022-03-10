@@ -11,12 +11,11 @@ struct CommentList: View {
     var body: some View {
         VStack(spacing: 0) {
             CommentRow()
-            CommentRow()
-            CommentRow()
-
-            CommentRow()
+            HStack {
+                CommentRow()
+            }
+            .padding(.leading, 50)
         }
-        
     }
 }
 

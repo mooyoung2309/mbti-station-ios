@@ -9,26 +9,38 @@ import SwiftUI
 
 struct CommentRow: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HStack {
-                Text("ENFP")
-                    .font(.headline)
-                Text("익명")
-                    .font(.headline)
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "person.crop.circle")
+                .resizable()
+                .foregroundColor(Color.init(UIColor.darkGray))
+                .frame(width: 40, height: 40)
+                
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text("ENFP")
+                        .font(.headline)
+                    Text("익명")
+                        .font(.headline)
+                    Spacer()
+                }
+                .padding(.bottom, 3)
+                
                 Text("3시간 전")
                     .font(.subheadline)
-                Spacer()
+                    .padding(.bottom, 5)
+                
+                Text("테스트 댓글 입니다. 테스트 댓글입니다. 테스트 댓글 입니다. 테스트 댓글입니다.")
+                    .padding(.bottom, 5)
+                
+                HStack(spacing: 3) {
+                    Image(systemName: "heart")
+                        .imageScale(.medium)
+                    Text("58")
+                }
             }
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 5, trailing: 10))
-            Text("테스트 댓글 입니다. 테스트 댓글입니다. 테스트 댓글 입니다. 테스트 댓글입니다.")
-                .padding(.horizontal, 10)
-            HStack(spacing: 3) {
-                Image(systemName: "heart")
-                    .imageScale(.medium)
-                Text("58")
-            }
-            .padding(10)
         }
+        .padding(.horizontal, 10)
+        .padding(.bottom, 10)
     }
 }
 

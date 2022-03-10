@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostingView: View {
-    @State var selection: String = "질문"
+    @State var selection: String = "✏️ 질문"
     var options: [String] = [
         "✏️ 질문",
         "📦 투표",
@@ -26,12 +26,12 @@ struct PostingView: View {
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 20)
-                if selection == "질문" {
+                if selection == "✏️ 질문" {
                     QuestionPostingView()
-                } else if (selection == "투표") {
+                } else if (selection == "📦 투표") {
                     VotePostingView()
                 }
-                else if (selection == "밸런스 게임") {
+                else if (selection == "🕹 밸런스 게임") {
                     BalancePostingView()
                 }
             }
