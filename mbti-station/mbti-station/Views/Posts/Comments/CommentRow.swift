@@ -40,7 +40,6 @@ struct CommentRow: View {
             }
         }
         .padding(.horizontal, 10)
-        .padding(.bottom, 10)
     }
 }
 
