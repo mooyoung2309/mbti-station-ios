@@ -13,7 +13,7 @@ struct CommentRow: View {
             Image(systemName: "person.crop.circle")
                 .resizable()
                 .foregroundColor(Color.init(UIColor.darkGray))
-                .frame(width: 40, height: 40)
+                .frame(width: 35, height: 35)
                 
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
@@ -23,10 +23,11 @@ struct CommentRow: View {
                         .font(.headline)
                     Spacer()
                 }
-                .padding(.bottom, 3)
+                .frame(height:20)
                 
                 Text("3시간 전")
                     .font(.subheadline)
+                    .frame(height: 15)
                     .padding(.bottom, 5)
                 
                 Text("테스트 댓글 입니다. 테스트 댓글입니다. 테스트 댓글 입니다. 테스트 댓글입니다.")
