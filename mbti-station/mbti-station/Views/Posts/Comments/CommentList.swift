@@ -14,7 +14,7 @@ struct CommentList: View {
             HStack {
                 CommentRow()
             }
-            .padding(.leading, 50)
+            .padding(.leading, 40)
         }
     }
 }

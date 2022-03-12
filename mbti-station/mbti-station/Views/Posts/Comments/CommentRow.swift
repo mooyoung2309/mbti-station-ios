@@ -18,29 +18,43 @@ struct CommentRow: View {
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Text("ENFP")
+                        .bold()
                         .font(.headline)
                     Text("익명")
+                        .bold()
                         .font(.headline)
                     Spacer()
                 }
                 .frame(height:20)
                 
                 Text("3시간 전")
-                    .font(.subheadline)
+                    .bold()
+                    .foregroundColor(Color.init(UIColor.darkGray))
+                    .font(.caption)
                     .frame(height: 15)
                     .padding(.bottom, 5)
                 
                 Text("테스트 댓글 입니다. 테스트 댓글입니다. 테스트 댓글 입니다. 테스트 댓글입니다.")
+                    .font(.body)
                     .padding(.bottom, 5)
                 
-                HStack(spacing: 3) {
-                    Image(systemName: "heart")
-                        .imageScale(.medium)
-                    Text("58")
+                HStack(spacing: 5) {
+                    HStack(spacing: 2) {
+                        Text("좋아요")
+                            .bold()
+                            .font(.subheadline)
+                        Text("58")
+                            .bold()
+                            .font(.subheadline)
+                    }
+                    HStack(spacing: 2) {
+                        Text("답글쓰기")
+                            .bold()
+                            .font(.subheadline)
+                    }
                 }
             }
         }
-        .padding(.horizontal, 10)
     }
 }
 
