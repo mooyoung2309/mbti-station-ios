@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "post": {
+            "user": {
+                "name": "익명",
+                "mbti": "INFP"
+            },
+            "type": {
+                "name": "밸런스 게임",
+                "imageName": "q.circle.fill",
+            },
+            "info": {
+                "title": "겨울 VS 여름",
+                "context": "둘 중 하나 골라봐",
+                "likeCount": 13,
+                "commentCount": 15,
+                "uploadDate": "dasd",
+            }
+            
+        },
+        "firstOption": {
+            "id": 0,
+            "name": "여름",
+            "results": [
+                {
+                    "mbti": "INFP",
+                    "count": 3
+                },
+            ]
+        },
+        "secondOption": {
+            "id": 1,
+            "name": "겨울",
+            "results": [
+                {
+                    "mbti": "INFP",
+                    "count": 3
+                },
+            ]
+        }
+    },
+]
+ 

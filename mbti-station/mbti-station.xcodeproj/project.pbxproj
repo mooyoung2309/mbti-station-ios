@@ -27,6 +27,8 @@
 		705FACC527C8B4B400AC2AC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACC427C8B4B400AC2AC1 /* User.swift */; };
 		705FACC927C8BD3D00AC2AC1 /* QuestionPostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FACC827C8BD3D00AC2AC1 /* QuestionPostRow.swift */; };
 		705FACCB27C8C69E00AC2AC1 /* QuestionPostData.json in Resources */ = {isa = PBXBuildFile; fileRef = 705FACCA27C8C69E00AC2AC1 /* QuestionPostData.json */; };
+		7063EEE227DE40A5000FCF8C /* BalanceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7063EEE127DE40A5000FCF8C /* BalanceData.json */; };
+		7063EEE427DE40F9000FCF8C /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063EEE327DE40F9000FCF8C /* Balance.swift */; };
 		7067990A27CC732C00B9CBDE /* VoteResultChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067990927CC732C00B9CBDE /* VoteResultChart.swift */; };
 		7067990C27CC7A9100B9CBDE /* lib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067990B27CC7A9100B9CBDE /* lib.swift */; };
 		7067990E27CC981C00B9CBDE /* CommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7067990D27CC981C00B9CBDE /* CommentList.swift */; };
@@ -101,6 +103,8 @@
 		705FACC427C8B4B400AC2AC1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		705FACC827C8BD3D00AC2AC1 /* QuestionPostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPostRow.swift; sourceTree = "<group>"; };
 		705FACCA27C8C69E00AC2AC1 /* QuestionPostData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionPostData.json; sourceTree = "<group>"; };
+		7063EEE127DE40A5000FCF8C /* BalanceData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BalanceData.json; sourceTree = "<group>"; };
+		7063EEE327DE40F9000FCF8C /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		7067990927CC732C00B9CBDE /* VoteResultChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultChart.swift; sourceTree = "<group>"; };
 		7067990B27CC7A9100B9CBDE /* lib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lib.swift; sourceTree = "<group>"; };
 		7067990D27CC981C00B9CBDE /* CommentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentList.swift; sourceTree = "<group>"; };
@@ -389,6 +393,7 @@
 				705FACC027C89B9900AC2AC1 /* PostOption.swift */,
 				705FACC427C8B4B400AC2AC1 /* User.swift */,
 				70CF4DBF27C9272800506C65 /* VotePost.swift */,
+				7063EEE327DE40F9000FCF8C /* Balance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				700A9D3127C77C3100FA9473 /* EditorPostData.json */,
 				705FACCA27C8C69E00AC2AC1 /* QuestionPostData.json */,
 				700B4CC627C9DA56003ADB34 /* VotePostData.json */,
+				7063EEE127DE40A5000FCF8C /* BalanceData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -512,6 +518,7 @@
 				700B4CC727C9DA56003ADB34 /* VotePostData.json in Resources */,
 				705FACCB27C8C69E00AC2AC1 /* QuestionPostData.json in Resources */,
 				70AFB7F627C6391B00E04F64 /* Preview Assets.xcassets in Resources */,
+				7063EEE227DE40A5000FCF8C /* BalanceData.json in Resources */,
 				700A9D3227C77C3100FA9473 /* EditorPostData.json in Resources */,
 				70AFB7F327C6391B00E04F64 /* Assets.xcassets in Resources */,
 			);
@@ -568,6 +575,7 @@
 				7067991D27CCB38700B9CBDE /* QuestionPostPreView.swift in Sources */,
 				7067990C27CC7A9100B9CBDE /* lib.swift in Sources */,
 				705FACC327C8B44900AC2AC1 /* QuestionPost.swift in Sources */,
+				7063EEE427DE40F9000FCF8C /* Balance.swift in Sources */,
 				70AFB7EF27C6391A00E04F64 /* mbti_stationApp.swift in Sources */,
 				70AAB72727CCDAA70007FCAC /* PostDetail.swift in Sources */,
 				705FACC927C8BD3D00AC2AC1 /* QuestionPostRow.swift in Sources */,

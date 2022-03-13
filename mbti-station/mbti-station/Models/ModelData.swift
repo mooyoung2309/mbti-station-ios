@@ -12,6 +12,7 @@ import SwiftUI
 final class ModelData: ObservableObject {
     @Published var posts: [Post] = load("PostData.json")
 //    @Published var editorPosts: [Post] = load("EditorPostData.json")
+    @Published var balances: [Balance] = load("BalanceData.json")
     @Published var questionPosts: [QuestionPost] = load("QuestionPostData.json")
     @Published var votePosts: [VotePost] = load("VotePostData.json")
     @Published var postOptions: [PostOption] = [
