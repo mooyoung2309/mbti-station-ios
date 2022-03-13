@@ -16,11 +16,8 @@ struct CommentRow: View {
                 .frame(width: 35, height: 35)
                 
             VStack(alignment: .leading, spacing: 0) {
-                HStack {
-                    Text("ENFP")
-                        .bold()
-                        .font(.headline)
-                    Text("익명")
+                HStack(spacing: 0) {
+                    Text("ENFP 익명")
                         .bold()
                         .font(.headline)
                     Spacer()

@@ -12,8 +12,19 @@ struct PostRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            PostRowHeader(post: post)
+            PostRowBottom(post: post)
+        }
+    }
+}
+
+struct PostRowHeader: View {
+    var post: Post
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
             HStack {
-                Text("질문")
+                Text(post.type.name)
                     .font(.caption)
                     .foregroundColor(Color.init(UIColor.darkGray))
                     .padding(5)
@@ -21,11 +32,23 @@ struct PostRow: View {
                     .cornerRadius(5)
             }
             .padding(.horizontal, 10)
-            Text(post.info.context)
-                .foregroundColor(.black)
-                .lineLimit(2)
-                .font(.title3)
-                .padding(10)
+            HStack {
+                Text(post.info.context)
+                    .foregroundColor(.black)
+                    .lineLimit(2)
+                    .font(.body)
+                Spacer()
+            }
+            .padding(.horizontal, 10)
+        }
+    }
+}
+
+struct PostRowBottom: View {
+    var post: Post
+    
+    var body: some View {
+        VStack(alignment: .leading) {
             HStack(alignment: .center, spacing: 5) {
                 Text(post.user.mbti + " " + post.user.name)
                     .foregroundColor(Color.init(UIColor.darkGray))
@@ -35,27 +58,17 @@ struct PostRow: View {
                     .foregroundColor(Color.init(UIColor.darkGray))
                     .font(.caption)
             }
-            .padding(10)
+            .padding(.horizontal, 10)
             Divider()
             HStack {
-                HStack(spacing: 2) {
-                    Image(systemName: "heart")
-                        .foregroundColor(.black)
-                        .imageScale(.medium)
-                    Text("공감 " + String(post.info.likeCount))
-                        .foregroundColor(.black)
-                        .font(.body)
-                }
-                HStack(spacing: 2) {
-                    Image(systemName: "bubble.left")
-                        .foregroundColor(.black)
-                        .imageScale(.medium)
-                    Text("댓글 " + String(post.info.commentCount))
-                        .foregroundColor(.black)
-                        .font(.body)
-                }
+                Text("좋아요 " + String(post.info.likeCount))
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                Text("댓글 " + String(post.info.commentCount))
+                    .font(.subheadline)
+                    .foregroundColor(.black)
             }
-            .padding(10)
+            .padding(.horizontal, 10)
         }
     }
 }
