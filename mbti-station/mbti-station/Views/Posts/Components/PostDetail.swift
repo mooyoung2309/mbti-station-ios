@@ -12,35 +12,46 @@ struct PostDetail: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 1) {
+            PostDetailHeader(post: post)
+        }
+    }
+    
+}
+
+struct PostDetailHeader: View {
+    var post: Post
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
             HStack {
-                Text("질문")
+                Text(post.type.name)
                     .font(.caption)
                     .foregroundColor(Color.init(UIColor.darkGray))
                     .padding(5)
                     .background(Color.init(UIColor.systemGray5))
                     .cornerRadius(5)
             }
-            .padding(10)
+            .padding(.bottom, 5)
             
             Text(post.user.mbti + " " + post.user.name)
                 .font(.headline)
-                .padding(.horizontal, 10)
+                .padding(.bottom, 3)
             
             Text("5분전")
                 .foregroundColor(Color.init(UIColor.darkGray))
                 .font(.caption)
-                .padding(.horizontal, 10)
+                .padding(.bottom, 10)
             
-            Divider()
-                .padding(10)
-            
-            Text(post.info.context)
-                .foregroundColor(.black)
-                .font(.body)
-                .padding(10)
+            HStack {
+                Text(post.info.context)
+                    .foregroundColor(.black)
+                    .lineLimit(2)
+                    .font(.body)
+                Spacer()
+            }
         }
+        .padding(.horizontal, 10)
     }
-    
 }
 
 struct PostDetailReact: View {
