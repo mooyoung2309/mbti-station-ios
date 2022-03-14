@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct QuestionPostView: View {
-    var questionPosts: [QuestionPost]
+    var questions: [Question]
     
     var body: some View {
         ScrollView {
-            ForEach(0..<questionPosts.count) {
+            ForEach(0..<questions.count) {
                 i in VStack {
-                    QuestionPostRow(questionPost:  questionPosts[i])
-                    if(i != questionPosts.count - 1) {
+                    QuestionRow(question:  questions[i])
+                    if(i != questions.count - 1) {
                         Divider()
                     }
                 }
@@ -25,8 +25,8 @@ struct QuestionPostView: View {
 }
 
 struct QuestionPostView_Previews: PreviewProvider {
-    static var questionPosts = ModelData().questionPosts
+    static var questionPosts = ModelData().questions
     static var previews: some View {
-        QuestionPostView(questionPosts: questionPosts)
+        QuestionPostView(questions: questionPosts)
     }
 }

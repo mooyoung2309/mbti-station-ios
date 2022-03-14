@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct QuestionPostDetail: View {
-    var quetionPost: QuestionPost
+    var question: Question
     
     var body: some View {
         VStack(alignment: .leading) {
-            PostDetail(post: quetionPost.post)
-            PostDetailReact(info: quetionPost.post.info)
+            PostDetail(post: question.post)
+            PostDetailReact(info: question.post.info)
         }
     }
 }
 
 struct QuestionPostDetail_Previews: PreviewProvider {
-    static var quetionPosts = ModelData().questionPosts
+    static var quetion = ModelData().questions[0]
     static var previews: some View {
-        QuestionPostDetail(quetionPost: quetionPosts[0])
+        QuestionPostDetail(question: quetion)
     }
 }

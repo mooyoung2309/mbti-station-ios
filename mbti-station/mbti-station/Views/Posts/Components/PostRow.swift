@@ -86,12 +86,15 @@ struct PostRowOption: View {
                 .padding(5)
                 .background(Color.init(UIColor.systemGray6))
                 .cornerRadius(5)
-            Text(name)
-                .font(.subheadline)
-                .foregroundColor(Color.init(UIColor.black))
-                .padding(5)
-                .background(Color.init(UIColor.systemGray6))
-                .cornerRadius(5)
+            HStack {
+                Text(name)
+                    .font(.subheadline)
+                    .foregroundColor(Color.init(UIColor.black))
+                    .padding(5)
+                Spacer()
+            }
+            .background(Color.init(UIColor.systemGray6))
+            .cornerRadius(5)
         }
         .padding(.horizontal, 10)
     }

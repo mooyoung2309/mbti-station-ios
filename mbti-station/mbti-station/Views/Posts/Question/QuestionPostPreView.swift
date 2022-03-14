@@ -9,11 +9,11 @@ import SwiftUI
 
 struct QuestionPostPreView: View {
     var navigationTitle: String
-    var questionPosts: [QuestionPost]
+    var questions: [Question]
     var limit: Int
     
     var body: some View {
-        let _questionPosts = questionPosts.prefix(limit)
+        let _questionPosts = questions.prefix(limit)
         
         VStack(alignment: .leading,spacing: 5) {
             HStack {
@@ -22,7 +22,7 @@ struct QuestionPostPreView: View {
                     .bold()
                 Spacer()
                 NavigationLink {
-                    QuestionPostView(questionPosts: questionPosts)
+                    QuestionPostView(questions: questions)
                         .navigationTitle(navigationTitle)
                         .navigationBarTitleDisplayMode(.inline)
                 } label: {
@@ -33,7 +33,7 @@ struct QuestionPostPreView: View {
             }
             ForEach(0..<_questionPosts.count) {
                 i in VStack {
-                    QuestionPostRow(questionPost: _questionPosts[i])
+                    QuestionRow(question: _questionPosts[i])
                     if(i != _questionPosts.count - 1) {
                         Divider()
                     }
@@ -44,8 +44,8 @@ struct QuestionPostPreView: View {
 }
 
 struct QuestionPostPreView_Previews: PreviewProvider {
-    static var questionPosts = ModelData().questionPosts
+    static var questionPosts = ModelData().questions
     static var previews: some View {
-        QuestionPostPreView(navigationTitle: "투표 게시판", questionPosts: questionPosts, limit: 3)
+        QuestionPostPreView(navigationTitle: "투표 게시판", questions: questionPosts, limit: 3)
     }
 }

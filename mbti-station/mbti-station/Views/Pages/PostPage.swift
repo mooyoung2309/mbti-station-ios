@@ -17,8 +17,8 @@ struct PostPage: View {
     var postOptions: [PostOption] {
         modelData.postOptions
     }
-    var questionPosts: [QuestionPost] {
-        modelData.questionPosts
+    var questionPosts: [Question] {
+        modelData.questions
     }
     var votes: [Vote] {
         modelData.votes
@@ -38,7 +38,7 @@ struct PostPage: View {
                         }
                         ForEach(0..<questionPosts.count) {
                             i in VStack(spacing: 0) {
-                                QuestionPostRow(questionPost: questionPosts[i])
+                                QuestionRow(question: questionPosts[i])
                                 if(i != questionPosts.count - 1) {
                                     CustomDivider(height: 10)
                                 }

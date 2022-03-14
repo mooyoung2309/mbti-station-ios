@@ -32,7 +32,7 @@ struct PostingView: View {
                     VotePostingView()
                 }
                 else if (selection == "🕹 밸런스 게임") {
-                    BalancePostingView()
+                    BalancePosting()
                 }
             }
         }

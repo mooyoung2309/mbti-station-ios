@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct QuestionPostDetailView: View {
-    var questionPost: QuestionPost
+    var question: Question
     
     var body: some View {
         ScrollView {
             VStack {
-                QuestionPostDetail(quetionPost: questionPost)
+                QuestionPostDetail(question: question)
                 CommentList()
             }
         }
@@ -21,8 +21,8 @@ struct QuestionPostDetailView: View {
 }
 
 struct QuestionPostDetailView_Previews: PreviewProvider {
-    static var quetionPosts = ModelData().questionPosts
+    static var quetionPosts = ModelData().questions
     static var previews: some View {
-        QuestionPostDetailView(questionPost: quetionPosts[0])
+        QuestionPostDetailView(question: quetionPosts[0])
     }
 }

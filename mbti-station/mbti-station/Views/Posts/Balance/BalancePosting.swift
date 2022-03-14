@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BalancePostingView: View {
+struct BalancePosting: View {
     @State private var titleText: String = ""
     @State private var isFocused: Bool = false
     @State private var optionTexts: [String] = [
@@ -25,6 +25,7 @@ struct BalancePostingView: View {
                 Text("두개의 선택지를 입력하세요.")
                     .font(.subheadline)
                     .padding(.horizontal, 10)
+                
                 OptionPosting(index: 1, optionText: $optionTexts[0])
                 
                 OptionPosting(index: 2, optionText: $optionTexts[1])
@@ -42,8 +43,8 @@ struct BalancePostingView: View {
     }
 }
 
-struct BalancePostingView_Previews: PreviewProvider {
+struct BalancePosting_Previews: PreviewProvider {
     static var previews: some View {
-        BalancePostingView()
+        BalancePosting()
     }
 }
