@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VotePostDetail: View {
-    var votePost: VotePost
+    var vote: Vote
     
     var body: some View {
         VStack {
@@ -19,29 +19,29 @@ struct VotePostDetail: View {
     }
 }
 
-struct Option: View {
-    var option: VoteOption
-    
-    var body: some View {
-        Button(action: {
-            
-        }) {
-            HStack {
-                Text(option.name)
-                    .font(.title3)
-                    .foregroundColor(.black)
-                Spacer()
-            }
-            .padding(5)
-            .border(.gray)
-        }
-        
-    }
-}
+//struct Option: View {
+//    var option: VoteOption
+//
+//    var body: some View {
+//        Button(action: {
+//
+//        }) {
+//            HStack {
+//                Text(option.name)
+//                    .font(.title3)
+//                    .foregroundColor(.black)
+//                Spacer()
+//            }
+//            .padding(5)
+//            .border(.gray)
+//        }
+//
+//    }
+//}
 
 struct VotePostDetail_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var vote = ModelData().votes[0]
     static var previews: some View {
-        VotePostDetail(votePost: votePosts[0])
+        VotePostDetail(vote: vote)
     }
 }

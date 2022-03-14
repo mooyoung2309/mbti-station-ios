@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct VotePostView: View {
-    var votePosts: [VotePost]
+    var votes: [Vote]
     
     var body: some View {
         ScrollView {
-            ForEach(0..<votePosts.count) {
+            ForEach(0..<votes.count) {
                 i in VStack {
-                    VotePostRow(votePost: votePosts[i])
-                    if(i != votePosts.count - 1) {
+                    VotePostRow(vote: votes[i])
+                    if(i != votes.count - 1) {
                         Divider()
                     }
                 }
@@ -25,8 +25,8 @@ struct VotePostView: View {
 }
 
 struct VotePostView_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var votes = ModelData().votes
     static var previews: some View {
-        VotePostView(votePosts: votePosts)
+        VotePostView(votes: votes)
     }
 }

@@ -107,7 +107,7 @@ struct ResultChart: View {
 }
 
 struct VoteResultChart_Previews: PreviewProvider {
-    static var voteResults = ModelData().votePosts[0].options[0].results
+    static var voteResults = ModelData().votes[0].options[0].results
     static var previews: some View {
         VoteResultChart(voteResults: voteResults)
     }

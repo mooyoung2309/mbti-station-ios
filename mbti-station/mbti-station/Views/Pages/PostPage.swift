@@ -20,8 +20,8 @@ struct PostPage: View {
     var questionPosts: [QuestionPost] {
         modelData.questionPosts
     }
-    var votePosts: [VotePost] {
-        modelData.votePosts
+    var votes: [Vote] {
+        modelData.votes
     }
     
     var body: some View {
@@ -30,9 +30,9 @@ struct PostPage: View {
                 ScrollView(showsIndicators: false) {
                     PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
                     VStack(spacing: 0) {
-                        ForEach(0..<votePosts.count) {
+                        ForEach(0..<votes.count) {
                             i in VStack(spacing: 0) {
-                                VotePostRow(votePost: votePosts[i])
+                                VotePostRow(vote: votes[i])
                                 CustomDivider(height: 10)
                             }
                         }

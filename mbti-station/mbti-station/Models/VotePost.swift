@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct VotePost: Hashable, Codable, Identifiable {
+struct Vote: Hashable, Codable, Identifiable {
     var id: Int
     var post: Post
     var options: [VoteOption]

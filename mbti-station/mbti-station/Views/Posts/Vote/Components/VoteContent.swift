@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct VoteContent: View {
-    var votePost: VotePost
+    var vote: Vote
     
     var body: some View {
         VStack {
-            ForEach(votePost.options, id: \.self) {
+            ForEach(vote.options, id: \.self) {
                 option in Button(action: {
                     
                 }) {
@@ -26,14 +26,14 @@ struct VoteContent: View {
                     .border(.gray)
                 }
             }
-            VoteResultChart(voteResults: votePost.options[0].results)
+            VoteResultChart(voteResults: vote.options[0].results)
         }
     }
 }
 
 struct VoteContent_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var vote = ModelData().votes[0]
     static var previews: some View {
-        VoteContent(votePost: votePosts[0])
+        VoteContent(vote: vote)
     }
 }

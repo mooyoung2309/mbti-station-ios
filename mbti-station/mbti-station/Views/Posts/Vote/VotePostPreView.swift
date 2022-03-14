@@ -9,11 +9,11 @@ import SwiftUI
 
 struct VotePostPreView: View {
     var navigationTitle: String
-    var votePosts: [VotePost]
+    var votes: [Vote]
     var limit: Int
     
     var body: some View {
-        let _votePosts = votePosts.prefix(limit)
+        let _votes = votes.prefix(limit)
         
         VStack(alignment: .leading,spacing: 5) {
             HStack {
@@ -22,7 +22,7 @@ struct VotePostPreView: View {
                     .bold()
                 Spacer()
                 NavigationLink {
-                    VotePostView(votePosts: votePosts)
+                    VotePostView(votes: votes)
                         .navigationTitle(navigationTitle)
                         .navigationBarTitleDisplayMode(.inline)
                 } label: {
@@ -31,10 +31,10 @@ struct VotePostPreView: View {
                         .foregroundColor(.blue)
                 }
             }
-            ForEach(0..<_votePosts.count) {
+            ForEach(0..<_votes.count) {
                 i in VStack {
-                    VotePostRow(votePost: votePosts[i])
-                    if(i != _votePosts.count - 1) {
+                    VotePostRow(vote: votes[i])
+                    if(i != _votes.count - 1) {
                         Divider()
                     }
                 }
@@ -44,8 +44,8 @@ struct VotePostPreView: View {
 }
 
 struct VotePostPreView_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var votes = ModelData().votes
     static var previews: some View {
-        VotePostPreView(navigationTitle: "투표", votePosts: votePosts, limit: 3)
+        VotePostPreView(navigationTitle: "투표", votes: votes, limit: 3)
     }
 }

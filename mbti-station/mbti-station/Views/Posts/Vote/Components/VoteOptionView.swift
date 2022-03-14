@@ -32,7 +32,7 @@ struct VoteOptionView: View {
 }
 
 struct VoteOptionView_Previews: PreviewProvider {
-    static var options = ModelData().votePosts[0].options
+    static var options = ModelData().votes[0].options
     static var previews: some View {
         VoteOptionView(options: options)
     }

@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct VotePostRow: View {
-    var votePost: VotePost
+    var vote: Vote
     
     var body: some View {
         NavigationLink {
-            VotePostDetailView(votePost: votePost)
+            VotePostDetailView(vote: vote)
                 .navigationTitle("투표")
                 .navigationBarTitleDisplayMode(.inline)
         } label: {
             VStack(alignment: .leading, spacing: 10) {
-                PostRowHeader(post: votePost.post)
+                PostRowHeader(post: vote.post)
                 VStack(spacing: 5) {
-                    ForEach(votePost.options.indices, id: \.self) {
+                    ForEach(vote.options.indices, id: \.self) {
                         i in
-                            PostRowOption(id: i + 1, name: votePost.options[i].name)
+                            PostRowOption(id: i + 1, name: vote.options[i].name)
                     }
                 }
-                PostRowBottom(post: votePost.post)
+                PostRowBottom(post: vote.post)
             }
         }
         
@@ -32,8 +32,8 @@ struct VotePostRow: View {
 }
 
 struct VotePostRow_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var vote = ModelData().votes[0]
     static var previews: some View {
-        VotePostRow(votePost: votePosts[0])
+        VotePostRow(vote: vote)
     }
 }

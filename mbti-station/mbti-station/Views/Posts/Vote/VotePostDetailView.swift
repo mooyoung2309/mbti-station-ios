@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct VotePostDetailView: View {
-    var votePost: VotePost
+    var vote: Vote
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                PostDetail(post: votePost.post)
-                VoteOptionView(options: votePost.options)
+                PostDetail(post: vote.post)
+                VoteOptionView(options: vote.options)
                 HStack {
                     Spacer()
-                    VoteResultChart(voteResults: votePost.options[0].results)
+                    VoteResultChart(voteResults: vote.options[0].results)
                     Spacer()
                 }
-                PostDetailReact(info: votePost.post.info)
+                PostDetailReact(info: vote.post.info)
                 CommentList()
             }
         }
@@ -28,8 +28,8 @@ struct VotePostDetailView: View {
 }
 
 struct VotePostDetailView_Previews: PreviewProvider {
-    static var votePosts = ModelData().votePosts
+    static var vote = ModelData().votes[0]
     static var previews: some View {
-        VotePostDetailView(votePost: votePosts[0])
+        VotePostDetailView(vote: vote)
     }
 }
