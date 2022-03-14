@@ -104,6 +104,34 @@
                     },
                 ]
             },
+            {
+                "id": 2,
+                "name": "가을",
+                "results": [
+                    {
+                        "mbti": "INFP",
+                        "count": 3
+                    },
+                    {
+                        "mbti": "ESFJ",
+                        "count": 27
+                    },
+                ]
+            },
+            {
+                "id": 3,
+                "name": "겨울",
+                "results": [
+                    {
+                        "mbti": "INFP",
+                        "count": 3
+                    },
+                    {
+                        "mbti": "ESFJ",
+                        "count": 27
+                    },
+                ]
+            },
         ]
     },
 ]

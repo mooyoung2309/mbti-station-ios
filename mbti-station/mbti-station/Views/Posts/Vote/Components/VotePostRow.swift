@@ -16,14 +16,21 @@ struct VotePostRow: View {
                 .navigationTitle("투표")
                 .navigationBarTitleDisplayMode(.inline)
         } label: {
-            VStack(spacing: 10) {
+            VStack(alignment: .leading, spacing: 10) {
                 PostRowHeader(post: votePost.post)
+                VStack(spacing: 5) {
+                    ForEach(votePost.options.indices, id: \.self) {
+                        i in
+                            PostRowOption(id: i + 1, name: votePost.options[i].name)
+                    }
+                }
                 PostRowBottom(post: votePost.post)
             }
         }
         
     }
 }
+
 struct VotePostRow_Previews: PreviewProvider {
     static var votePosts = ModelData().votePosts
     static var previews: some View {

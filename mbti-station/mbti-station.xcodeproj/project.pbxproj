@@ -179,7 +179,7 @@
 			path = Pages;
 			sourceTree = "<group>";
 		};
-		700B4CC827C9DC84003ADB34 /* VotePosts */ = {
+		700B4CC827C9DC84003ADB34 /* Vote */ = {
 			isa = PBXGroup;
 			children = (
 				7067991827CCB18200B9CBDE /* Components */,
@@ -188,7 +188,7 @@
 				7067991227CC992A00B9CBDE /* VotePostDetailView.swift */,
 				708BA76227D5D71D0084FB98 /* VotePostingView.swift */,
 			);
-			path = VotePosts;
+			path = Vote;
 			sourceTree = "<group>";
 		};
 		7025E73227D1F4FB00CA919E /* Contents */ = {
@@ -198,7 +198,7 @@
 			path = Contents;
 			sourceTree = "<group>";
 		};
-		703B6F8127C8D81F005778F2 /* QuestionPosts */ = {
+		703B6F8127C8D81F005778F2 /* Question */ = {
 			isa = PBXGroup;
 			children = (
 				7067991927CCB33300B9CBDE /* Components */,
@@ -207,7 +207,7 @@
 				70AAB72827CCDDFE0007FCAC /* QuestionPostDetailView.swift */,
 				708BA76027D5D2570084FB98 /* QuestionPostingView.swift */,
 			);
-			path = QuestionPosts;
+			path = Question;
 			sourceTree = "<group>";
 		};
 		705FACB727C8935D00AC2AC1 /* Profiles */ = {
@@ -218,14 +218,14 @@
 			path = Profiles;
 			sourceTree = "<group>";
 		};
-		7067990F27CC986B00B9CBDE /* Comments */ = {
+		7067990F27CC986B00B9CBDE /* Comment */ = {
 			isa = PBXGroup;
 			children = (
 				7067990D27CC981C00B9CBDE /* CommentList.swift */,
 				7067991027CC988000B9CBDE /* CommentRow.swift */,
 				70510BAA27DC51F8000FA544 /* PostingCommentView.swift */,
 			);
-			path = Comments;
+			path = Comment;
 			sourceTree = "<group>";
 		};
 		7067991827CCB18200B9CBDE /* Components */ = {
@@ -252,20 +252,12 @@
 		708BA75227D5AC3D0084FB98 /* Balance */ = {
 			isa = PBXGroup;
 			children = (
-				708BA75527D5B32A0084FB98 /* Components */,
 				708BA75327D5AC960084FB98 /* BalanceListView.swift */,
 				708BA75627D5B3590084FB98 /* BalancePostingView.swift */,
-			);
-			path = Balance;
-			sourceTree = "<group>";
-		};
-		708BA75527D5B32A0084FB98 /* Components */ = {
-			isa = PBXGroup;
-			children = (
 				7025E73327D1FD2F00CA919E /* BalanceRow.swift */,
 				701357F327D38984003300B2 /* BalanceCard.swift */,
 			);
-			path = Components;
+			path = Balance;
 			sourceTree = "<group>";
 		};
 		708BA75A27D5C7340084FB98 /* Posting */ = {
@@ -371,12 +363,12 @@
 		70D022D827C734100048FC86 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				708BA75A27D5C7340084FB98 /* Posting */,
 				70AAB72527CCD9250007FCAC /* Components */,
-				7067990F27CC986B00B9CBDE /* Comments */,
-				703B6F8127C8D81F005778F2 /* QuestionPosts */,
+				708BA75A27D5C7340084FB98 /* Posting */,
+				7067990F27CC986B00B9CBDE /* Comment */,
+				703B6F8127C8D81F005778F2 /* Question */,
+				700B4CC827C9DC84003ADB34 /* Vote */,
 				708BA75227D5AC3D0084FB98 /* Balance */,
-				700B4CC827C9DC84003ADB34 /* VotePosts */,
 				700A9D2F27C7781C00FA9473 /* PostCard.swift */,
 				700A9D3327C77DC700FA9473 /* PostCardScrollView.swift */,
 				705FACBE27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift */,
