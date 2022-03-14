@@ -24,11 +24,44 @@ struct PostPage: View {
         modelData.votes
     }
     
+    var postTypes: [String] {
+        modelData.postTypes
+    }
     var body: some View {
         NavigationView {
             ZStack {
                 ScrollView(showsIndicators: false) {
-                    PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
+                    HStack {
+                        ForEach(postTypes, id: \.self) {
+                            postType in PostTypeBtns(selection: $selectionType, name: postType)
+                        }
+                        Spacer()
+                    }
+                    .padding(.horizontal, 10)
+                    
+                    LazyVStack(alignment: .leading, spacing: 16) {
+                        HStack {
+                            Text(selectionType + " 게시판")
+                                .font(.subheadline)
+                            Spacer()
+                            Picker("Select a paint color", selection: $selectionOption) {
+                                Button(action: {}) {
+                                    Label("최신 순", systemImage: "clock")
+                                }
+                                Button(action: {}) {
+                                    Label("좋아요 순", systemImage: "heart")
+                                }
+                                Button(action: {}) {
+                                    Label("댓글 순", systemImage: "bubble.left")
+                                }
+                            }
+                        }
+                        .pickerStyle(.menu)
+                    }
+                    .padding(.horizontal, 10)
+                    
+                    Divider()
+                    
                     VStack(spacing: 0) {
                         ForEach(0..<votes.count) {
                             i in VStack(spacing: 0) {

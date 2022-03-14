@@ -25,6 +25,11 @@ final class ModelData: ObservableObject {
         "질문": Image(systemName: "q.circle.fill"),
         "투표": Image(systemName: "archivebox.circle.fill"),
     ]
+    @Published var postTypes: [String] = [
+        "✏️ 질문",
+        "📦 투표",
+        "🕹 밸런스 게임",
+    ]
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

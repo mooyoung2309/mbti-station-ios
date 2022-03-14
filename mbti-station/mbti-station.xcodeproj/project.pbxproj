@@ -63,6 +63,7 @@
 		70D022E427C742D50048FC86 /* PostData.json in Resources */ = {isa = PBXBuildFile; fileRef = 70D022E327C742D50048FC86 /* PostData.json */; };
 		70D487BB27CF4C1100DCA33E /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D487BA27CF4C1100DCA33E /* CreatePostView.swift */; };
 		70D487BD27CF58A800DCA33E /* CreatePostRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D487BC27CF58A800DCA33E /* CreatePostRule.swift */; };
+		70E22E8D27DF9084009FBC76 /* PostSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E22E8C27DF9084009FBC76 /* PostSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		70D022E327C742D50048FC86 /* PostData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PostData.json; sourceTree = "<group>"; };
 		70D487BA27CF4C1100DCA33E /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		70D487BC27CF58A800DCA33E /* CreatePostRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRule.swift; sourceTree = "<group>"; };
+		70E22E8C27DF9084009FBC76 /* PostSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				70AAB72627CCDAA70007FCAC /* PostDetail.swift */,
 				70D487BA27CF4C1100DCA33E /* CreatePostView.swift */,
 				70D487BC27CF58A800DCA33E /* CreatePostRule.swift */,
+				70E22E8C27DF9084009FBC76 /* PostSelection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				705FACC527C8B4B400AC2AC1 /* User.swift in Sources */,
 				705FACBB27C893AC00AC2AC1 /* ProfilePage.swift in Sources */,
 				7028737F27D07AB700EA10A8 /* VoteOptionView.swift in Sources */,
+				70E22E8D27DF9084009FBC76 /* PostSelection.swift in Sources */,
 				705FACBF27C8987F00AC2AC1 /* PostOptionButtonScrollView.swift in Sources */,
 				708BA75427D5AC960084FB98 /* BalanceListView.swift in Sources */,
 				7025E73427D1FD2F00CA919E /* BalanceRow.swift in Sources */,
