@@ -16,7 +16,10 @@ struct VotePostRow: View {
                 .navigationTitle("투표")
                 .navigationBarTitleDisplayMode(.inline)
         } label: {
-            PostRow(post: votePost.post)
+            VStack(spacing: 10) {
+                PostRowHeader(post: votePost.post)
+                PostRowBottom(post: votePost.post)
+            }
         }
         
     }

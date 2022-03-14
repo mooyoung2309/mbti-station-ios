@@ -54,6 +54,7 @@ struct CustomDivider : View {
         Rectangle()
             .fill(Color.init(UIColor.systemGray6))
             .frame(height: height)
+            .padding(.vertical, 10)
     }
 }
 

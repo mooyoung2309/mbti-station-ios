@@ -16,7 +16,10 @@ struct QuestionPostRow: View {
                 .navigationTitle("질문")
                 .navigationBarTitleDisplayMode(.inline)
         } label: {
-            PostRow(post: questionPost.post)
+            VStack(spacing: 10) {
+                PostRowHeader(post: questionPost.post)
+                PostRowBottom(post: questionPost.post)
+            }
         }
     }
 }

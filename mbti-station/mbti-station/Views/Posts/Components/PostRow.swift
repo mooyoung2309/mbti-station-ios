@@ -13,6 +13,7 @@ struct PostRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             PostRowHeader(post: post)
+            PostRowOption(id: 1, name: "어쩌구")
             PostRowBottom(post: post)
         }
     }
@@ -70,6 +71,29 @@ struct PostRowBottom: View {
             }
             .padding(.horizontal, 10)
         }
+    }
+}
+
+struct PostRowOption: View {
+    var id: Int
+    var name: String
+    
+    var body: some View {
+        HStack {
+            Text(String(id))
+                .font(.subheadline)
+                .foregroundColor(Color.init(UIColor.black))
+                .padding(5)
+                .background(Color.init(UIColor.systemGray6))
+                .cornerRadius(5)
+            Text(name)
+                .font(.subheadline)
+                .foregroundColor(Color.init(UIColor.black))
+                .padding(5)
+                .background(Color.init(UIColor.systemGray6))
+                .cornerRadius(5)
+        }
+        .padding(.horizontal, 10)
     }
 }
 

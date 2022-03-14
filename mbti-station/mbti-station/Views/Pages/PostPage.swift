@@ -29,7 +29,7 @@ struct PostPage: View {
             ZStack {
                 ScrollView(showsIndicators: false) {
                     PostPageHeader(selectionOption: $selectionOption, selectionType: $selectionType)
-                    VStack {
+                    VStack(spacing: 0) {
                         ForEach(0..<votePosts.count) {
                             i in VStack(spacing: 0) {
                                 VotePostRow(votePost: votePosts[i])

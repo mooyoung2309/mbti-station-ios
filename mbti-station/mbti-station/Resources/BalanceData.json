@@ -11,8 +11,8 @@
                 "imageName": "q.circle.fill",
             },
             "info": {
-                "title": "겨울 VS 여름",
-                "context": "둘 중 하나 골라봐",
+                "title": "둘 중 더 나은거 골라봐",
+                "context": "어느거 고를거야 ?",
                 "likeCount": 13,
                 "commentCount": 15,
                 "uploadDate": "dasd",
@@ -21,7 +21,7 @@
         },
         "firstOption": {
             "id": 0,
-            "name": "여름",
+            "name": "여자친구 아빠랑 목욕탕 가기",
             "results": [
                 {
                     "mbti": "INFP",
@@ -31,7 +31,7 @@
         },
         "secondOption": {
             "id": 1,
-            "name": "겨울",
+            "name": "여자친구 엄마랑 필라테스 수업듣기",
             "results": [
                 {
                     "mbti": "INFP",

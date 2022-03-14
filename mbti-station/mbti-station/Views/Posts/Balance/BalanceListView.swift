@@ -12,7 +12,7 @@ struct BalanceListView: View {
         ScrollView {
             ForEach(0..<10) {
                 i in VStack {
-                    BalanceRow()
+//                    BalanceRow()
                     CustomDivider(height: 10)
                 }
             }
