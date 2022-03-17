@@ -28,7 +28,7 @@ final class ModelData: ObservableObject {
     @Published var postTypes: [String] = [
         "✏️ 질문",
         "📦 투표",
-        "🕹 밸런스 게임",
+        "🕹 밸런스",
     ]
 }
 
